@@ -12,7 +12,7 @@ function App() {
                 <Configurator coefficients={coefficients}/>
             </section>
 
-            <p>{coefficients}</p>
+            {/* <p>{coefficients}</p> */}
             <code>{JSON.stringify(vehicles)}</code>
         </div>
     );
