@@ -1,35 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Configurator.scss';
 import { Button, TextField } from "@mui/material";
 
 function Configurator({ configurationChanged }) {
+    const [trunk, setTrunk] = useState(2.5);
+    const [range, setRange] = useState(4);
+    const [consumption, setConsumption] = useState(1);
+    const [supercharge, setSupercharge] = useState(2);
+    const [quality, setQuality] = useState(3.5);
+    const [practicality, setPracticality] = useState(1.5);
+    const [look, setLook] = useState(1);
+    const [price, setPrice] = useState(1.5);
+    const [volume, setVolume] = useState(2.5);
+
     return (
         <div className="configurator" >
             <section className="Goods">
                 <h4>Avantages</h4>
-                <TextField id="coeff-trunk" label="Coefficient Coffre" value="2.5" type="number" size="small" step="0.5"
+                <TextField label="Coefficient Coffre" value={trunk} onChange={event => setTrunk(+event.target.value)} type="number" size="small" step="0.5"
                     margin="dense" />
-                <TextField id="coeff-range" label="Coefficient Autonomie" value="4" type="number" size="small" step="0.5"
+                <TextField label="Coefficient Autonomie" value={range} onChange={event => setRange(+event.target.value)} type="number" size="small" step="0.5"
                     margin="dense" />
-                <TextField id="coeff-consumption" label="Coefficient Consommation" value="1" type="number" size="small"
+                <TextField label="Coefficient Consommation" value={consumption} onChange={event => setConsumption(+event.target.value)} type="number" size="small"
                     step="0.5" margin="dense" />
-                <TextField id="coeff-supercharge" label="Coefficient Durée supercharge" value="2" type="number" size="small"
+                <TextField label="Coefficient Durée supercharge" value={supercharge} onChange={event => setSupercharge(+event.target.value)} type="number" size="small"
                     step="0.5" margin="dense" />
-                <TextField id="coeff-quality" label="Coefficient Quality" value="3.5" type="number" size="small"
+                <TextField label="Coefficient Quality" value={quality} onChange={event => setQuality(+event.target.value)} type="number" size="small"
                     step="0.5" margin="dense" />
-                <TextField id="coeff-practicality" label="Coefficient Praticité" value="1.5" type="number" size="small"
+                <TextField label="Coefficient Praticité" value={practicality} onChange={event => setPracticality(+event.target.value)} type="number" size="small"
                     step="0.5" margin="dense" />
-                <TextField id="coeff-look" label="Coefficient Apparence" value="1" type="number" size="small" step="0.5"
+                <TextField label="Coefficient Apparence" value={look} onChange={event => setLook(+event.target.value)} type="number" size="small" step="0.5"
                     margin="dense" />
             </section>
             <section className="Bads">
                 <h4>Inconvénients</h4>
-                <TextField id="coeff-price" label="Coefficient Prix" value="1.5" type="number" size="small" step="0.5"
+                <TextField label="Coefficient Prix" value={price} onChange={event => setPrice(+event.target.value)} type="number" size="small" step="0.5"
                     margin="dense" />
-                <TextField id="coeff-volume" label="Coefficient Volume" value="2.5" type="number" size="small" step="0.5"
+                <TextField label="Coefficient Volume" value={volume} onChange={event => setVolume(+event.target.value)} type="number" size="small" step="0.5"
                     margin="dense" />
             </section>
-            <Button onClick={() => ({ a: 1 })}>Calculer</Button>
+            {range}
+            <Button onClick={() => configurationChanged({ trunk, range, consumption , supercharge, quality, practicality, look, price, volume })}>Calculer</Button>
         </div>
     )
 };
