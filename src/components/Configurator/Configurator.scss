@@ -1,8 +1,13 @@
 .configurator {
-  max-width: 20vw;
+  max-width: 18vw;
   margin-left: 32px;
+
   .good, .bads {
     display: flex;
     flex-direction: column;
+  }
+
+  .bads {
+    margin-bottom: 16px;
   }
 }

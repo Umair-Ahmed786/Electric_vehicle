@@ -15,7 +15,7 @@ function Configurator({ configurationChanged }) {
 
     return (
         <div className="configurator" >
-            <section className="Goods">
+            <section className="goods">
                 <h4>Avantages</h4>
                 <TextField label="Coefficient Coffre" value={trunk} onChange={event => setTrunk(+event.target.value)} type="number" size="small" step="0.5"
                     margin="dense" />
@@ -32,15 +32,15 @@ function Configurator({ configurationChanged }) {
                 <TextField label="Coefficient Apparence" value={look} onChange={event => setLook(+event.target.value)} type="number" size="small" step="0.5"
                     margin="dense" />
             </section>
-            <section className="Bads">
+            <section className="bads">
                 <h4>Inconvénients</h4>
                 <TextField label="Coefficient Prix" value={price} onChange={event => setPrice(+event.target.value)} type="number" size="small" step="0.5"
                     margin="dense" />
                 <TextField label="Coefficient Volume" value={volume} onChange={event => setVolume(+event.target.value)} type="number" size="small" step="0.5"
                     margin="dense" />
             </section>
-            {range}
-            <Button onClick={() => configurationChanged({ trunk, range, consumption , supercharge, quality, practicality, look, price, volume })}>Calculer</Button>
+
+            <Button onClick={() => configurationChanged({ trunk, range, consumption, supercharge, quality, practicality, look, price, volume })} variant="contained">Calculer</Button>
         </div>
     )
 };

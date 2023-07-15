@@ -5,3 +5,7 @@
 .App-header {
   text-align: center;
 }
+
+.App-content {
+  display: flex;
+}
