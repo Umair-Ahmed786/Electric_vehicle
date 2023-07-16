@@ -12,7 +12,7 @@ import TableHead from '@mui/material/TableHead';
 function Results({ results }) {
     return (
         <TableContainer component={Paper} className="results-table">
-            <Table >
+            <Table size="small">
                 <TableHead>
                     <TableRow>
                         <TableCell>Voiture</TableCell>
@@ -24,7 +24,7 @@ function Results({ results }) {
                 <TableBody>
                     {results.map(result => (
                         <TableRow key={result.vehicle.name}>
-                            <TableCell component="th" scope="row">{result.vehicle.name}</TableCell>
+                            <TableCell>{result.vehicle.name}</TableCell>
                             <TableCell align='right'>{result.scoreGood}</TableCell>
                             <TableCell align='right'>{result.scoreBad}</TableCell>
                             <TableCell align='right'>{result.score}</TableCell>
