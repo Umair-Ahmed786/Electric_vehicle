@@ -6,14 +6,14 @@ function scoreForField(voiture, intervals, field) {
     return intervals.findIndex(
         (interval) =>
             voiture[field] >= interval[0] && voiture[field] < interval[1]
-    );
+    ) ?? 0;
 }
 
 export function scorePositif(vehicle, config) {
-    const coffreScore = scoreForField(vehicle, coffreIntervals, "trunk");
+    const coffreScore = scoreForField(vehicle, trunkIntervals, "trunk");
     const autonomieScore = scoreForField(
         vehicle,
-        autonomieIntervals,
+        rangeIntervals,
         "range"
     );
     const consommationScore = scoreForField(
@@ -45,15 +45,16 @@ export function scoreNegatif(voiture, config) {
     return -(prixScore * config.price + volumeScore * config.volume)
 }
 
-const coffreIntervals = [
-    [0, 499],
-    [500, 524],
-    [525, 549],
-    [550, 574],
-    [575, 599],
-    [600, 10000],
+const trunkIntervals = [
+    [0, 420],
+    [421, 464],
+    [465, 489],
+    [601, 10000],
+    [490, 514],
+    [515, 539],
+    [540, 600],
 ];
-const autonomieIntervals = [
+const rangeIntervals = [
     [0, 379],
     [380, 419],
     [420, 459],
@@ -86,10 +87,10 @@ const volumeIntervals = [
     [14.7, 10000],
 ];
 const prixIntervals = [
-    [0, 41999],
-    [42000, 47499],
-    [47500, 52999],
-    [53000, 57499],
-    [57500, 62999],
-    [63000, 1000000],
+    [0, 47999],
+    [48000, 51999],
+    [52000, 55999],
+    [56000, 62999],
+    [63000, 69999],
+    [70000, 1000000],
 ];

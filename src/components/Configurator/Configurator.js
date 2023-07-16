@@ -4,7 +4,7 @@ import { Button, TextField } from "@mui/material";
 
 function Configurator({ configurationChanged }) {
     const [trunk, setTrunk] = useState(2.5);
-    const [range, setRange] = useState(4);
+    const [range, setRange] = useState(5);
     const [consumption, setConsumption] = useState(1);
     const [supercharge, setSupercharge] = useState(2);
     const [quality, setQuality] = useState(3.5);
