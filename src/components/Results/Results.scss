@@ -1,5 +1,8 @@
 .results-table {
-    max-width: 45vw;
+    max-width: 34vw;
+    @media(max-width: 1367px){
+        max-width: 45vw;}
+
     margin-left: 32px;
 
     tbody tr {

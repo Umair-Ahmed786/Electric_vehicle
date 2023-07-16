@@ -8,8 +8,7 @@ import Paper from '@mui/material/Paper';
 import TableBody from '@mui/material/TableBody';
 import TableHead from '@mui/material/TableHead';
 
-
-function Results({ results }) {
+function Results({ results, carSelected }) {
     return (
         <TableContainer component={Paper} className="results-table">
             <Table size="small">
@@ -23,7 +22,7 @@ function Results({ results }) {
                 </TableHead>
                 <TableBody>
                     {results.map(result => (
-                        <TableRow key={result.vehicle.name}>
+                        <TableRow key={result.vehicle.name} onClick={() => carSelected(result.vehicle)}>
                             <TableCell>{result.vehicle.name}</TableCell>
                             <TableCell align='right'>{result.scoreGood}</TableCell>
                             <TableCell align='right'>{result.scoreBad}</TableCell>
