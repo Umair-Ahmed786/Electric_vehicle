@@ -7,7 +7,7 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import TableBody from '@mui/material/TableBody';
 
-function Car({ car }) {
+function Car({car}) {
     if (car) {
         return (
             <TableContainer component={Paper} className="car-table">
@@ -43,22 +43,20 @@ function Car({ car }) {
                         </TableRow>
                         <TableRow>
                             <TableCell>Qualité</TableCell>
-                            <TableCell>{car.quality} /5</TableCell>
+                            <TableCell>{car.quality} /10</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>Praticité</TableCell>
-                            <TableCell>{car.practicality} /5</TableCell>
+                            <TableCell>{car.practicality} /10</TableCell>
                         </TableRow>
                         <TableRow>
                             <TableCell>Esthétique</TableCell>
-                            <TableCell>{car.look} /5</TableCell>
+                            <TableCell>{car.look} /10</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
             </TableContainer>
         )
-    } else {
-        return;
     }
 }
 

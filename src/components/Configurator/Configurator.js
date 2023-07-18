@@ -3,15 +3,15 @@ import './Configurator.scss';
 import { Button, TextField } from "@mui/material";
 
 function Configurator({ configurationChanged }) {
-    const [trunk, setTrunk] = useState(2.5);
+    const [trunk, setTrunk] = useState(2);
     const [range, setRange] = useState(5);
-    const [consumption, setConsumption] = useState(1);
-    const [supercharge, setSupercharge] = useState(2);
-    const [quality, setQuality] = useState(3.5);
-    const [practicality, setPracticality] = useState(1.5);
+    const [consumption, setConsumption] = useState(2);
+    const [supercharge, setSupercharge] = useState(1);
+    const [quality, setQuality] = useState(2);
+    const [practicality, setPracticality] = useState(3);
     const [look, setLook] = useState(1);
-    const [price, setPrice] = useState(1.5);
-    const [volume, setVolume] = useState(2.5);
+    const [price, setPrice] = useState(2);
+    const [volume, setVolume] = useState(2);
 
     return (
         <div className="configurator" >
@@ -43,6 +43,6 @@ function Configurator({ configurationChanged }) {
             <Button onClick={() => configurationChanged({ trunk, range, consumption, supercharge, quality, practicality, look, price, volume })} variant="contained">Calculer</Button>
         </div>
     )
-};
+}
 
 export default Configurator;
