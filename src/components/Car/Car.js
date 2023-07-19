@@ -44,15 +44,15 @@ function Car({car}) {
                             </TableRow>
                             <TableRow>
                                 <TableCell>Qualité</TableCell>
-                                <TableCell>{car.quality} /10</TableCell>
+                                <TableCell>{car.quality} /5</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Praticité</TableCell>
-                                <TableCell>{car.practicality} /10</TableCell>
+                                <TableCell>{car.practicality} /5</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Esthétique</TableCell>
-                                <TableCell>{car.look} /10</TableCell>
+                                <TableCell>{car.look} /5</TableCell>
                             </TableRow>
                         </TableBody>
                     </Table>

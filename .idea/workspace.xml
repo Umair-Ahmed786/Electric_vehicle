@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="00231513-9f20-4c66-a1af-5d5270d7f2af" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Car/Car.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Car/Car.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Car/Car.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Car/Car.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Configurator/Configurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Configurator/Configurator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compute-vehicles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/compute-vehicles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vehicles.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/vehicles.json" afterDir="false" />
+    <list default="true" id="00231513-9f20-4c66-a1af-5d5270d7f2af" name="Changes" comment="Fill more images">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +31,22 @@
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/nicolasc/PROJETS/react-electric-vehicles",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -46,10 +56,40 @@
       <option name="presentableId" value="Default" />
       <updated>1689767969019</updated>
       <workItem from="1689767970154" duration="5000" />
+      <workItem from="1689835169536" duration="4204000" />
     </task>
+    <task id="LOCAL-00001" summary="Fill more images">
+      <option name="closed" value="true" />
+      <created>1689837655418</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689837655418</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fill more images">
+      <option name="closed" value="true" />
+      <created>1689838527034</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689838527034</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Fill more images">
+      <option name="closed" value="true" />
+      <created>1689840058894</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689840058894</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fill more images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fill more images" />
   </component>
 </project>

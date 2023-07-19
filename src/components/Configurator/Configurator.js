@@ -10,7 +10,7 @@ function Configurator({configurationChanged}) {
     const [quality, setQuality] = useState(4);
     const [look, setLook] = useState(1.5);
     const [price, setPrice] = useState(2);
-    const [volume, setVolume] = useState(1.5);
+    const [volume, setVolume] = useState(1);
     const [practicality, setPracticality] = useState(4);
 
     return (
