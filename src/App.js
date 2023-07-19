@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './App.scss';
 import Configurator from "./components/Configurator/Configurator";
 import Results from './components/Results/Results';
 import Car from './components/Car/Car';
@@ -34,7 +34,7 @@ function App() {
                 <Car car={car} />
             </section>
 
-            <code>{JSON.stringify(vehicles)}</code>
+            {/*<code>{JSON.stringify(vehicles)}</code>*/}
         </div>
     );
 }

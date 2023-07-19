@@ -1,6 +1,37 @@
-.car-table {
-    max-width: 20vw;
-    @media(max-width: 1367px){
-        max-width: 28vw;}
+.car {
+  display: flex;
+  flex: 1;
+  @media(max-width: 1367px) {
+    flex-wrap: wrap;
+  }
+
+  .car-table {
+    width: 20vw;
+    @media(max-width: 1367px) {
+      width: 28vw;
+    }
     margin: 0 32px;
+    height: fit-content;
+  }
+
+  .car-images {
+    flex: 1;
+    margin-right: 32px;
+    @media(min-width: 1920px) {
+      display: flex;
+      align-items: flex-start;
+      align-content: flex-start;
+      flex-wrap: wrap;
+    }
+
+    img {
+      max-width: 20vw;
+      max-height: 21vh;
+    }
+
+    div.space {
+      height: 32px;
+      width: 100%;
+    }
+  }
 }

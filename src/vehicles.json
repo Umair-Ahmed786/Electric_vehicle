@@ -23,7 +23,11 @@
     "trunk": 535,
     "volume": 13.82,
     "imgTrunk": "https://www.automobiledimension.com/photos/interior/audi-q4-sportback-e-tron-2021-boot.jpg",
-    "imgDashboard": "https://www.automobiledimension.com/photos/interior/audi-q4-sportback-e-tron-2021-dashboard.jpg"
+    "imgDashboard": "https://www.automobiledimension.com/photos/interior/audi-q4-sportback-e-tron-2021-dashboard.jpg",
+    "imgSide": "https://images.caradisiac.com/images/2/9/1/0/192910/S0-essai-audi-q4-sportback-e-tron-2021-le-concept-qui-s-est-echappe-695724.jpg",
+    "imgBack": "https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c680-d465/content/medias/images/cars/audi/q4/audi--q4-sportback-e-tron--2022/audi--q4-sportback-e-tron--2022-m-2.jpg",
+    "imgFront": "https://pdlv.fr/wp-content/uploads/2022/04/fiche-technique-audi-q4-sportback-e-tron.jpg",
+    "imgBackseats": "https://cdnwp.dealerk.com/8980e174/uploads/sites/2/2022/03/banquette-arriere-audi-q4-1-1024x683.jpg"
   },
   {
     "consumption": 20.2,

@@ -10,52 +10,64 @@ import TableBody from '@mui/material/TableBody';
 function Car({car}) {
     if (car) {
         return (
-            <TableContainer component={Paper} className="car-table">
-                <Table>
-                    <TableBody>
-                        <TableRow>
-                            <TableCell>Nom</TableCell>
-                            <TableCell>{car.name}</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell sx={{fontWeight: "bold"}}>Prix</TableCell>
-                            <TableCell sx={{fontWeight: "bold"}}>{car.price.toLocaleString()} €</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>Coffre</TableCell>
-                            <TableCell>{car.trunk} L</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>Autonomie</TableCell>
-                            <TableCell>{car.range} km</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>Consommation</TableCell>
-                            <TableCell>{car.consumption} kWh/100km</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>Supercharge</TableCell>
-                            <TableCell>{car.supercharge} min</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>Volume</TableCell>
-                            <TableCell>{car.volume} m³</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>Qualité</TableCell>
-                            <TableCell>{car.quality} /10</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>Praticité</TableCell>
-                            <TableCell>{car.practicality} /10</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>Esthétique</TableCell>
-                            <TableCell>{car.look} /10</TableCell>
-                        </TableRow>
-                    </TableBody>
-                </Table>
-            </TableContainer>
+            <section className="car">
+                <TableContainer component={Paper} className="car-table">
+                    <Table>
+                        <TableBody>
+                            <TableRow>
+                                <TableCell>Nom</TableCell>
+                                <TableCell>{car.name}</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell sx={{fontWeight: "bold"}}>Prix</TableCell>
+                                <TableCell sx={{fontWeight: "bold"}}>{car.price.toLocaleString()} €</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Coffre</TableCell>
+                                <TableCell>{car.trunk} L</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Autonomie</TableCell>
+                                <TableCell>{car.range} km</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Consommation</TableCell>
+                                <TableCell>{car.consumption} kWh/100km</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Supercharge</TableCell>
+                                <TableCell>{car.supercharge} min</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Volume</TableCell>
+                                <TableCell>{car.volume} m³</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Qualité</TableCell>
+                                <TableCell>{car.quality} /10</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Praticité</TableCell>
+                                <TableCell>{car.practicality} /10</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Esthétique</TableCell>
+                                <TableCell>{car.look} /10</TableCell>
+                            </TableRow>
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+
+                <div className="car-images">
+                    {car.imgFront && <img src={car.imgFront} alt="Avant"/>}
+                    {car.imgBack && <img src={car.imgBack} alt="Arrière"/>}
+                    {car.imgSide && <img src={car.imgSide} alt="Profil"/>}
+                    <div className="space"></div>
+                    {car.imgDashboard && <img src={car.imgDashboard} alt="Tableau de bord"/>}
+                    {car.imgBackseats && <img src={car.imgBackseats} alt="Banquette"/>}
+                    {car.imgTrunk && <img src={car.imgTrunk} alt="Coffre"/>}
+                </div>
+            </section>
         )
     }
 }

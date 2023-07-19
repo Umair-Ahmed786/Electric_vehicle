@@ -1,6 +1,10 @@
 .configurator {
-  max-width: 16vw;
+  width: 14vw;
+  @media (min-width: 1920px) {
+    width: 9vw;
+  }
   margin-left: 32px;
+  margin-top: -32px;
 
   .goods, .bads {
     display: flex;
