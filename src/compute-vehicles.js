@@ -33,8 +33,8 @@ export function scorePositif(vehicle, config) {
         consommationScore * config.consumption +
         superchargeScore * config.supercharge +
         vehicle.quality * config.quality +
-        vehicle.practicality * config.practicality +
-        vehicle.look * config.look
+        vehicle.look * config.look +
+        vehicle.practicality * config.practicality
     );
 }
 
@@ -47,23 +47,22 @@ export function scoreNegatif(voiture, config) {
 
 const trunkIntervals = [
     [0, 420],
-    [421, 464],
-    [465, 489],
+    [421, 474],
+    [475, 499],
     [601, 10000],
-    [490, 514],
-    [515, 539],
-    [540, 600],
+    [500, 529],
+    [530, 600],
 ];
 const rangeIntervals = [
-    [0, 379],
-    [380, 419],
-    [420, 459],
-    [460, 499],
-    [500, 539],
+    [360, 399],
+    [400, 439],
+    [440, 469],
+    [470, 509],
+    [510, 539],
     [540, 10000],
 ];
 const superchargeIntervals = [
-    [32, 10000],
+    [32, 40],
     [29, 31],
     [26, 28],
     [23, 25],
@@ -71,13 +70,15 @@ const superchargeIntervals = [
     [0, 19],
 ];
 const consommationIntervals = [
-    [23, 10000],
+    [23, 25],
     [21.9, 22.9],
     [20.6, 21.8],
     [19.3, 20.5],
     [18.1, 19.2],
     [0, 18],
 ];
+
+
 const volumeIntervals = [
     [0, 12.59],
     [12.6, 13.09],
