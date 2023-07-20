@@ -12,6 +12,14 @@
     }
     margin: 0 32px;
     height: fit-content;
+
+    .good {
+      background-color: rgba(lightgreen, 0.3);
+    }
+
+    .bad {
+      background-color: rgba(lightpink, 0.3);
+    }
   }
 
   .car-images {

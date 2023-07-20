@@ -7,8 +7,9 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import TableBody from '@mui/material/TableBody';
 
-function Car({car}) {
-    if (car) {
+function Car({result}) {
+    if (result) {
+        console.warn(result.scoreBad.price)
         return (
             <section className="car">
                 <TableContainer component={Paper} className="car-table">
@@ -16,56 +17,58 @@ function Car({car}) {
                         <TableBody>
                             <TableRow>
                                 <TableCell>Nom</TableCell>
-                                <TableCell>{car.name}</TableCell>
+                                <TableCell>{result.vehicle.name}</TableCell>
                             </TableRow>
-                            <TableRow>
+                            <TableRow
+                                className={result.scoreBad.price < -5 ? 'bad' : 'good'}>
                                 <TableCell sx={{fontWeight: "bold"}}>Prix</TableCell>
-                                <TableCell sx={{fontWeight: "bold"}}>{car.price.toLocaleString()} €</TableCell>
+                                <TableCell
+                                    sx={{fontWeight: "bold"}}>{result.vehicle.price.toLocaleString()} €</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Coffre</TableCell>
-                                <TableCell>{car.trunk} L</TableCell>
+                                <TableCell>{result.vehicle.trunk} L</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Autonomie</TableCell>
-                                <TableCell>{car.range} km</TableCell>
+                                <TableCell>{result.vehicle.range} km</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Consommation</TableCell>
-                                <TableCell>{car.consumption} kWh/100km</TableCell>
+                                <TableCell>{result.vehicle.consumption} kWh/100km</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Supercharge</TableCell>
-                                <TableCell>{car.supercharge} min</TableCell>
+                                <TableCell>{result.vehicle.supercharge} min</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Volume</TableCell>
-                                <TableCell>{car.volume} m³</TableCell>
+                                <TableCell>{result.vehicle.volume} m³</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Qualité</TableCell>
-                                <TableCell>{car.quality} /5</TableCell>
+                                <TableCell>{result.vehicle.quality} /5</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Praticité</TableCell>
-                                <TableCell>{car.practicality} /5</TableCell>
+                                <TableCell>{result.vehicle.practicality} /5</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Esthétique</TableCell>
-                                <TableCell>{car.look} /5</TableCell>
+                                <TableCell>{result.vehicle.look} /5</TableCell>
                             </TableRow>
                         </TableBody>
                     </Table>
                 </TableContainer>
 
                 <div className="car-images">
-                    {car.imgFront && <img src={car.imgFront} alt="Avant"/>}
-                    {car.imgBack && <img src={car.imgBack} alt="Arrière"/>}
-                    {car.imgSide && <img src={car.imgSide} alt="Profil"/>}
+                    {result.vehicle.imgFront && <img src={result.vehicle.imgFront} alt="Avant"/>}
+                    {result.vehicle.imgBack && <img src={result.vehicle.imgBack} alt="Arrière"/>}
+                    {result.vehicle.imgSide && <img src={result.vehicle.imgSide} alt="Profil"/>}
                     <div className="space"></div>
-                    {car.imgDashboard && <img src={car.imgDashboard} alt="Tableau de bord"/>}
-                    {car.imgBackseats && <img src={car.imgBackseats} alt="Banquette"/>}
-                    {car.imgTrunk && <img src={car.imgTrunk} alt="Coffre"/>}
+                    {result.vehicle.imgDashboard && <img src={result.vehicle.imgDashboard} alt="Tableau de bord"/>}
+                    {result.vehicle.imgBackseats && <img src={result.vehicle.imgBackseats} alt="Banquette"/>}
+                    {result.vehicle.imgTrunk && <img src={result.vehicle.imgTrunk} alt="Coffre"/>}
                 </div>
             </section>
         )

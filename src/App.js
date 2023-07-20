@@ -23,15 +23,15 @@ function App() {
 
     const configurationChanged = (e) => computeResults(e)
     const [results, setResults] = useState([]);
-    const [car, setCar] = useState(null);
+    const [result, setResult] = useState(null);
 
     return (
         <div className="App">
             <header className="App-header"><h1>Choix d'une voiture électrique</h1></header>
             <section className="App-content">
                 <Configurator configurationChanged={configurationChanged} />
-                <Results results={results} carSelected={(vehicle) => setCar(vehicle)} />
-                <Car car={car} />
+                <Results results={results} resultSelected={(r) => setResult(r)} />
+                <Car result={result} />
             </section>
 
             {/*<code>{JSON.stringify(vehicles)}</code>*/}
