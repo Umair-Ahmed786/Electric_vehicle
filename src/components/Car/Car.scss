@@ -1,17 +1,24 @@
 .car {
   display: flex;
   flex: 1;
+
   @media(max-width: 1367px) {
     flex-wrap: wrap;
   }
 
   .car-table {
     width: 20vw;
+
     @media(max-width: 1367px) {
       width: 28vw;
     }
+
     margin: 0 32px;
     height: fit-content;
+
+    .amazing {
+      background-color: lightgreen;
+    }
 
     .good {
       background-color: rgba(lightgreen, 0.3);
@@ -20,11 +27,16 @@
     .bad {
       background-color: rgba(lightpink, 0.3);
     }
+
+    .trash {
+      background-color: rgba(red, 0.3);
+    }
   }
 
   .car-images {
     flex: 1;
     margin-right: 32px;
+
     @media(min-width: 1920px) {
       display: flex;
       align-items: flex-start;

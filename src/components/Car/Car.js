@@ -6,7 +6,9 @@ import Table from '@mui/material/Table';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import TableBody from '@mui/material/TableBody';
-
+function classBad(score){
+    
+}
 function Car({result}) {
     if (result) {
         console.warn(result.scoreBad.price)
