@@ -3,7 +3,7 @@ import './Configurator.scss';
 import {Button, TextField} from "@mui/material";
 
 function Configurator({configurationChanged}) {
-    const [trunk, setTrunk] = useState(2);
+    const [trunk, setTrunk] = useState(2.5);
     const [range, setRange] = useState(5);
     const [consumption, setConsumption] = useState(2);
     const [supercharge, setSupercharge] = useState(1);

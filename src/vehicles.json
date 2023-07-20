@@ -36,6 +36,24 @@
     "imgTrunk": "https://image-annonce.lacentrale.fr/1096x829/E111730696_STANDARD_9.jpg?version=1677636591"
   },
   {
+    "consumption": 17.9,
+    "look": 2.5,
+    "name": "BMW iX1",
+    "practicality": 3,
+    "price": 62500,
+    "quality": 4.5,
+    "range": 420,
+    "supercharge": 23,
+    "trunk": 490,
+    "volume": 13.49,
+    "imgFront": "https://media.autoexpress.co.uk/image/private/s--4lJX6_3m--/f_auto,t_content-image-full-desktop@1/v1681850894/autoexpress/2023/04/BMW%20iX1%20xLine%20002_nbhwie.jpg",
+    "imgBack": "https://media.autoexpress.co.uk/image/private/s--2DVShVRX--/f_auto,t_content-image-full-desktop@1/v1681850892/autoexpress/2023/04/BMW%20iX1%20xLine%20026_d3nclc.jpg",
+    "imgSide": "https://image-annonce.lacentrale.fr/1096x829/E112568085_STANDARD_1.jpg?version=1689009458",
+    "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/E112568085_STANDARD_10.jpg?version=1689009458",
+    "imgBackseats": "https://images.caradisiac.com/images/9/1/3/9/199139/S1-essai-bmw-ix1-xdrive30-2022-si-logique-electrique-735051.jpg",
+    "imgTrunk": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTZ8VyTuUdn__9RT3FIE_IM2VMbGjQQr2_ADrzlm3VBbbUbBpEgnxJaSWgAqeHgLpNU9I&usqp=CAU"
+  },
+  {
     "consumption": 20.2,
     "look": 3,
     "name": "Ford Mustang Mach-E (76kWh 2RM)",
@@ -268,5 +286,23 @@
     "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/W102597533_STANDARD_5.jpg?version=1689163322",
     "imgBackseats": "https://cleantechnica.com/files/2023/01/VW-ID.5-rear-seats-showing-ample-leg-space.jpg",
     "imgTrunk": "https://www.myevreview.com/gr/images/63cfda0903063/63f6/63f64eb6c92b1-c.jpg"
+  },
+  {
+    "consumption": 19.9,
+    "look": 3,
+    "name": "Volvo XC40 Recharge",
+    "practicality": 3,
+    "price": 55260,
+    "quality": 4,
+    "range": 574,
+    "supercharge": 23,
+    "trunk": 452,
+    "volume": 13.89,
+    "imgFront": "https://cdn.jdpower.com/JDP_2022%20Volvo%20XC40%20Recharge%20Thunder%20Grey%20Front%20Quarter%20View.jpeg",
+    "imgBack": "https://topelectricsuv.com/wp-content/uploads/2022/02/2023-Volvo-XC40-Recharge-facelift-rear.jpg",
+    "imgSide": "https://ev-database.org/img/auto/Volvo_XC40_Recharge_2023/Volvo_XC40_Recharge_2023-01@2x.jpg",
+    "imgDashboard": "https://www.automotiveaddicts.com/wp-content/uploads/2023/04/2023-volvo-xc40-recharge-ultimate-dashboard.jpg",
+    "imgBackseats": "https://media.drivingelectric.com/image/private/s--HnrjV0re--/v1597795453/drivingelectric/2020-03/dsc_3736.jpg",
+    "imgTrunk": "https://www.topgear.com/sites/default/files/2023/05/10-Volvo-XC40-Recharge.jpg"
   }
 ]
