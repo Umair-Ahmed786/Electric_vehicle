@@ -27,22 +27,43 @@ export function scorePositif(vehicle, config) {
         "supercharge"
     );
 
-    return (
-        coffreScore * config.trunk +
-        autonomieScore * config.range +
-        consommationScore * config.consumption +
-        superchargeScore * config.supercharge +
-        vehicle.quality * config.quality +
-        vehicle.look * config.look +
-        vehicle.practicality * config.practicality
-    );
+    const trunkScoreWeighted = coffreScore * config.trunk;
+    const rangeScoreWeighted = autonomieScore * config.range;
+    const consumptionScoreWeighted = consommationScore * config.consumption;
+    const superchargeScoreWeighted = superchargeScore * config.supercharge;
+    const qualityScoreWeighted = vehicle.quality * config.quality;
+    const lookScoreWeighted = vehicle.look * config.look;
+    const practicalityScoreWeighted = vehicle.practicality * config.practicality;
+
+    return {
+        total: trunkScoreWeighted +
+            rangeScoreWeighted +
+            consumptionScoreWeighted +
+            superchargeScoreWeighted +
+            qualityScoreWeighted +
+            lookScoreWeighted +
+            practicalityScoreWeighted,
+        trunk: trunkScoreWeighted,
+        range: rangeScoreWeighted,
+        consumption: consumptionScoreWeighted,
+        supercharge: superchargeScoreWeighted,
+        quality: qualityScoreWeighted,
+        look: lookScoreWeighted,
+        practicality: practicalityScoreWeighted
+    };
 }
 
 export function scoreNegatif(voiture, config) {
     const prixScore = scoreForField(voiture, prixIntervals, "price");
     const volumeScore = scoreForField(voiture, volumeIntervals, "volume");
+    const priceScoreWeighted = prixScore * config.price;
+    const volumeScoreWeighted = volumeScore * config.volume;
 
-    return -(prixScore * config.price + volumeScore * config.volume)
+    return {
+        total: -(priceScoreWeighted + volumeScoreWeighted),
+        price: -priceScoreWeighted,
+        volume: -volumeScoreWeighted
+    }
 }
 
 const trunkIntervals = [

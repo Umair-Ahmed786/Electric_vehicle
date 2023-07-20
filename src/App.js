@@ -13,7 +13,7 @@ function App() {
         vehicles.forEach((vehicle) => {
             const scoreGood = scorePositif(vehicle, config);
             const scoreBad = scoreNegatif(vehicle, config);
-            const score = scoreGood + scoreBad;
+            const score = scoreGood.total + scoreBad.total;
             res.push({ vehicle, score, scoreGood, scoreBad });
         });
         res.sort(sortByScore);
