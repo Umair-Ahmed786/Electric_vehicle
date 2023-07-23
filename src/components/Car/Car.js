@@ -6,12 +6,13 @@ import Table from '@mui/material/Table';
 import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import TableBody from '@mui/material/TableBody';
-function classBad(score){
-    
+function classBad(score) {
+
 }
-function Car({result}) {
+function Car({ result }) {
+    console.info('Selected car', result);
+
     if (result) {
-        console.warn(result.scoreBad.price)
         return (
             <section className="car">
                 <TableContainer component={Paper} className="car-table">
@@ -23,9 +24,9 @@ function Car({result}) {
                             </TableRow>
                             <TableRow
                                 className={result.scoreBad.price < -5 ? 'bad' : 'good'}>
-                                <TableCell sx={{fontWeight: "bold"}}>Prix</TableCell>
+                                <TableCell sx={{ fontWeight: "bold" }}>Prix</TableCell>
                                 <TableCell
-                                    sx={{fontWeight: "bold"}}>{result.vehicle.price.toLocaleString()} €</TableCell>
+                                    sx={{ fontWeight: "bold" }}>{result.vehicle.price.toLocaleString()} €</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Coffre</TableCell>
@@ -64,13 +65,13 @@ function Car({result}) {
                 </TableContainer>
 
                 <div className="car-images">
-                    {result.vehicle.imgFront && <img src={result.vehicle.imgFront} alt="Avant"/>}
-                    {result.vehicle.imgBack && <img src={result.vehicle.imgBack} alt="Arrière"/>}
-                    {result.vehicle.imgSide && <img src={result.vehicle.imgSide} alt="Profil"/>}
+                    {result.vehicle.imgFront && <img src={result.vehicle.imgFront} alt="Avant" />}
+                    {result.vehicle.imgBack && <img src={result.vehicle.imgBack} alt="Arrière" />}
+                    {result.vehicle.imgSide && <img src={result.vehicle.imgSide} alt="Profil" />}
                     <div className="space"></div>
-                    {result.vehicle.imgDashboard && <img src={result.vehicle.imgDashboard} alt="Tableau de bord"/>}
-                    {result.vehicle.imgBackseats && <img src={result.vehicle.imgBackseats} alt="Banquette"/>}
-                    {result.vehicle.imgTrunk && <img src={result.vehicle.imgTrunk} alt="Coffre"/>}
+                    {result.vehicle.imgDashboard && <img src={result.vehicle.imgDashboard} alt="Tableau de bord" />}
+                    {result.vehicle.imgBackseats && <img src={result.vehicle.imgBackseats} alt="Banquette" />}
+                    {result.vehicle.imgTrunk && <img src={result.vehicle.imgTrunk} alt="Coffre" />}
                 </div>
             </section>
         )

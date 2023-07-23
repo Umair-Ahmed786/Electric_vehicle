@@ -8,12 +8,11 @@ import { scoreNegatif, scorePositif, sortByScore } from './compute-vehicles';
 
 function App() {
     const computeResults = (config) => {
-        console.warn(config)
         const res = []
         vehicles.forEach((vehicle) => {
             const scoreGood = scorePositif(vehicle, config);
             const scoreBad = scoreNegatif(vehicle, config);
-            const score = scoreGood.total + scoreBad.total;
+            const score = Math.round((scoreGood.total + scoreBad.total) * 10) / 10;
             res.push({ vehicle, score, scoreGood, scoreBad });
         });
         res.sort(sortByScore);

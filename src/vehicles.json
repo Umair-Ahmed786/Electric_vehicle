@@ -1,7 +1,7 @@
 [
   {
     "consumption": 17.8,
-    "look": 3,
+    "look": 4,
     "name": "Audi Q4 40 e-tron",
     "practicality": 3.5,
     "price": 57600,
@@ -37,9 +37,9 @@
   },
   {
     "consumption": 17.9,
-    "look": 2.5,
+    "look": 3.5,
     "name": "BMW iX1",
-    "practicality": 3,
+    "practicality": 3.5,
     "price": 62500,
     "quality": 4.5,
     "range": 420,
@@ -111,7 +111,7 @@
     "consumption": 19.8,
     "look": 0.5,
     "name": "Mercedes EQB 250",
-    "practicality": 4.5,
+    "practicality": 5,
     "price": 63850,
     "quality": 3.5,
     "range": 478,
@@ -127,7 +127,7 @@
   },
   {
     "consumption": 19.2,
-    "look": 2,
+    "look": 3.5,
     "name": "Skoda Enyaq iV 80",
     "practicality": 3,
     "price": 57180,
@@ -145,7 +145,7 @@
   },
   {
     "consumption": 19.6,
-    "look": 4,
+    "look": 5,
     "name": "Tesla Model 3 Grande Autonomie",
     "practicality": 1,
     "price": 49990,
@@ -163,7 +163,7 @@
   },
   {
     "consumption": 17.6,
-    "look": 3.5,
+    "look": 4.5,
     "name": "Tesla Model Y Grande Autonomie",
     "practicality": 2,
     "price": 52990,
