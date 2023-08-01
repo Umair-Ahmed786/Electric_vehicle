@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import './Configurator.scss';
+import './HybridConfigurator.scss';
 import {Button, TextField} from "@mui/material";
 
-function Configurator({configurationChanged}) {
+function HybridConfigurator({configurationChanged}) {
     const [trunk, setTrunk] = useState(2.5);
-    const [range, setRange] = useState(5);
-    const [consumption, setConsumption] = useState(2);
+    const [tank, setTank] = useState(4);
+    const [consumption, setConsumption] = useState(6);
     const [supercharge, setSupercharge] = useState(1);
     const [quality, setQuality] = useState(4);
     const [look, setLook] = useState(1.5);
@@ -16,7 +16,7 @@ function Configurator({configurationChanged}) {
     useEffect(() => {
         configurationChanged({
             trunk,
-            range,
+            tank,
             consumption,
             supercharge,
             quality,
@@ -34,13 +34,13 @@ function Configurator({configurationChanged}) {
                 <TextField label="Coefficient Coffre" value={trunk} onChange={event => setTrunk(+event.target.value)}
                            type="number" size="small" inputProps={{step: 0.5}}
                            margin="dense"/>
-                <TextField label="Coefficient Autonomie" value={range} onChange={event => setRange(+event.target.value)}
+                <TextField label="Coefficient Réservoir" value={tank} onChange={event => setTank(+event.target.value)}
                            type="number" size="small" inputProps={{step: 0.5}}
                            margin="dense"/>
                 <TextField label="Coefficient Consommation" value={consumption}
                            onChange={event => setConsumption(+event.target.value)} type="number" size="small"
                            inputProps={{step: 0.5}} margin="dense"/>
-                <TextField label="Coefficient Durée supercharge" value={supercharge}
+                <TextField label="Coefficient Durée 'super'charge" value={supercharge}
                            onChange={event => setSupercharge(+event.target.value)} type="number" size="small"
                            inputProps={{step: 0.5}} margin="dense"/>
                 <TextField label="Coefficient Quality" value={quality}
@@ -65,7 +65,7 @@ function Configurator({configurationChanged}) {
 
             <Button onClick={() => configurationChanged({
                 trunk,
-                range,
+                tank,
                 consumption,
                 supercharge,
                 quality,
@@ -78,4 +78,4 @@ function Configurator({configurationChanged}) {
     )
 }
 
-export default Configurator;
+export default HybridConfigurator;
