@@ -10,5 +10,101 @@
     "supercharge": 89,
     "trunk": 500,
     "volume": 13.63
+  },
+  {
+    "consumption": 9,
+    "look": 4.5,
+    "name": "DS7 E-Tense 225",
+    "practicality": 4,
+    "price": 58890,
+    "quality": 4.5,
+    "tank": 43,
+    "supercharge": 67,
+    "trunk": 555,
+    "volume": 14.20
+  },
+  {
+    "consumption": 9.4,
+    "look": 4,
+    "name": "Hyundai Tucson",
+    "practicality": 3,
+    "price": 40400,
+    "quality": 3,
+    "tank": 42,
+    "supercharge": 70,
+    "trunk": 546,
+    "volume": 13.85
+  },
+  {
+    "consumption": 8,
+    "look": 4,
+    "name": "Kia Sportage PHEV",
+    "practicality": 3.5,
+    "price": 52440,
+    "quality": 3,
+    "tank": 42,
+    "supercharge": 100,
+    "trunk": 540,
+    "volume": 13.85
+  },
+  {
+    "consumption": 7.5,
+    "look": 4,
+    "name": "Lexus NX 450h",
+    "practicality": 4,
+    "price": 70000,
+    "quality": 5,
+    "tank": 55,
+    "supercharge": 100,
+    "trunk": 545,
+    "volume": 14.25
+  },
+  {
+    "consumption": 7.8,
+    "look": 2,
+    "name": "Mercedes CLA e Shooting Brake",
+    "practicality": 3,
+    "price": 61549,
+    "quality": 4.5,
+    "tank": 35,
+    "supercharge": 18,
+    "trunk": 440,
+    "volume": 12.37
+  },
+  {
+    "consumption": 7.6,
+    "look": 3,
+    "name": "Peugeot 308 SW Hybrid 180",
+    "practicality": 3.5,
+    "price": 43490,
+    "quality": 3,
+    "tank": 45,
+    "supercharge": 61,
+    "trunk": 548,
+    "volume": 12.45
+  },
+  {
+    "consumption": 11,
+    "look": 4,
+    "name": "Range Rover Evoque S",
+    "practicality": 4,
+    "price": 64304,
+    "quality": 5,
+    "tank": 55,
+    "supercharge": 17,
+    "trunk": 472,
+    "volume": 13.72
+  },
+  {
+    "consumption": 6,
+    "look": 3.5,
+    "name": "Toyota RAV4",
+    "practicality": 4,
+    "price": 60050,
+    "quality": 3,
+    "tank": 55,
+    "supercharge": 100,
+    "trunk": 520,
+    "volume": 14.37
   }
 ]

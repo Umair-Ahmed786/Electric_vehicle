@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00231513-9f20-4c66-a1af-5d5270d7f2af" name="Changes" comment="WIP car detail color (should be more detailed)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Car/Car.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Car/Car.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Car/Car.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Car/Car.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Configurator/Configurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Configurator/Configurator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vehicles.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/vehicles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HybridConfigurator/HybridConfigurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HybridConfigurator/HybridConfigurator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datasets/hybrid-vehicles.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasets/hybrid-vehicles.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +20,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2Sn2LTlSenIjEdh1wfD02NLKkJK" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -66,6 +66,7 @@
       <workItem from="1689767970154" duration="5000" />
       <workItem from="1689835169536" duration="17047000" />
       <workItem from="1690180554769" duration="3499000" />
+      <workItem from="1690958835773" duration="295000" />
     </task>
     <task id="LOCAL-00001" summary="Fill more images">
       <option name="closed" value="true" />

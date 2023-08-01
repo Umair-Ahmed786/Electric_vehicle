@@ -6,10 +6,10 @@ function HybridConfigurator({configurationChanged}) {
     const [trunk, setTrunk] = useState(2.5);
     const [tank, setTank] = useState(4);
     const [consumption, setConsumption] = useState(6);
-    const [supercharge, setSupercharge] = useState(1);
+    const [supercharge, setSupercharge] = useState(0.5);
     const [quality, setQuality] = useState(4);
-    const [look, setLook] = useState(1.5);
-    const [price, setPrice] = useState(2);
+    const [look, setLook] = useState(2);
+    const [price, setPrice] = useState(5);
     const [volume, setVolume] = useState(1);
     const [practicality, setPracticality] = useState(4);
 
