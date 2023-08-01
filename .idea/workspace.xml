@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00231513-9f20-4c66-a1af-5d5270d7f2af" name="Changes" comment="Fill more images">
+    <list default="true" id="00231513-9f20-4c66-a1af-5d5270d7f2af" name="Changes" comment="WIP car detail color (should be more detailed)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Car/Car.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Car/Car.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Car/Car.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Car/Car.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Configurator/Configurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Configurator/Configurator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vehicles.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/vehicles.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +19,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -24,20 +30,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/nicolasc/PROJETS/react-electric-vehicles",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/nicolasc/PROJETS/react-electric-vehicles&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\nicolasc\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\231.9225.16\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -56,7 +64,8 @@
       <option name="presentableId" value="Default" />
       <updated>1689767969019</updated>
       <workItem from="1689767970154" duration="5000" />
-      <workItem from="1689835169536" duration="4204000" />
+      <workItem from="1689835169536" duration="17047000" />
+      <workItem from="1690180554769" duration="3499000" />
     </task>
     <task id="LOCAL-00001" summary="Fill more images">
       <option name="closed" value="true" />
@@ -82,7 +91,63 @@
       <option name="project" value="LOCAL" />
       <updated>1689840058894</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fill more images">
+      <option name="closed" value="true" />
+      <created>1689859778223</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689859778223</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fill more images">
+      <option name="closed" value="true" />
+      <created>1689860793417</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689860793417</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add Volvo XC40 Recharge">
+      <option name="closed" value="true" />
+      <created>1689865898440</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689865898440</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add Volvo XC40 Recharge">
+      <option name="closed" value="true" />
+      <created>1689865905296</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689865905296</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add Volvo XC40 Recharge">
+      <option name="closed" value="true" />
+      <created>1689866434191</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1689866434191</updated>
+    </task>
+    <task id="LOCAL-00009" summary="pass detailed score from computings">
+      <option name="closed" value="true" />
+      <created>1689867560173</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689867560173</updated>
+    </task>
+    <task id="LOCAL-00010" summary="WIP car detail color (should be more detailed)">
+      <option name="closed" value="true" />
+      <created>1689868220261</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689868220261</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +155,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fill more images" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fill more images" />
+    <MESSAGE value="add Volvo XC40 Recharge" />
+    <MESSAGE value="pass detailed score from computings" />
+    <MESSAGE value="WIP car detail color (should be more detailed)" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP car detail color (should be more detailed)" />
   </component>
 </project>

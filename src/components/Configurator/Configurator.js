@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './Configurator.scss';
 import {Button, TextField} from "@mui/material";
 
@@ -12,6 +12,20 @@ function Configurator({configurationChanged}) {
     const [price, setPrice] = useState(2);
     const [volume, setVolume] = useState(1);
     const [practicality, setPracticality] = useState(4);
+
+    useEffect(() => {
+        configurationChanged({
+            trunk,
+            range,
+            consumption,
+            supercharge,
+            quality,
+            practicality,
+            look,
+            price,
+            volume
+        })
+    }, [])
 
     return (
         <div className="configurator">
