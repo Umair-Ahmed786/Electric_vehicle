@@ -20,7 +20,7 @@ function classBad(scoreBad) {
     return 'trash';
 }
 
-function Car({result}) {
+function Car({result, type}) {
     if (result) {
         return (
             <section className="car">
@@ -42,12 +42,12 @@ function Car({result}) {
                                 <TableCell>{result.vehicle.trunk} L</TableCell>
                             </TableRow>
                             <TableRow>
-                                <TableCell>Autonomie</TableCell>
-                                <TableCell>{result.vehicle.range} km</TableCell>
+                                <TableCell>{type === 'EV' ? 'Autonomie' : 'Réservoir'}</TableCell>
+                                <TableCell>{type === 'EV' ? `${result.vehicle.range} km` : `${result.vehicle.tank} L`}</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Consommation</TableCell>
-                                <TableCell>{result.vehicle.consumption} kWh/100km</TableCell>
+                                <TableCell>{result.vehicle.consumption} {type === 'EV' ? 'kWh/100km' : 'L/100km'}</TableCell>
                             </TableRow>
                             <TableRow>
                                 <TableCell>Supercharge</TableCell>

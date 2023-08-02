@@ -52,7 +52,7 @@ function App() {
                 <section className="App-content">
                     <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')}/>
                     <Results results={results} resultSelected={(r) => setResult(r)}/>
-                    <Car result={result}/>
+                    <Car result={result} type="EV"/>
                 </section>
             )}
 
@@ -60,7 +60,7 @@ function App() {
                 <section className="App-content">
                     <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>
                     <Results results={results} resultSelected={(r) => setResult(r)}/>
-                    <Car result={result}/>
+                    <Car result={result} type="PHEV"/>
                 </section>
             )}
         </div>

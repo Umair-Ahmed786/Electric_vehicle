@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00231513-9f20-4c66-a1af-5d5270d7f2af" name="Changes" comment="WIP car detail color (should be more detailed)">
-      <change beforePath="$PROJECT_DIR$/src/components/HybridConfigurator/HybridConfigurator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HybridConfigurator/HybridConfigurator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datasets/hybrid-vehicles.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasets/hybrid-vehicles.json" afterDir="false" />
+    <list default="true" id="00231513-9f20-4c66-a1af-5d5270d7f2af" name="Changes" comment="Fix Car.js for EV/PHEV">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Car/Car.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Car/Car.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
       <workItem from="1689767970154" duration="5000" />
       <workItem from="1689835169536" duration="17047000" />
       <workItem from="1690180554769" duration="3499000" />
-      <workItem from="1690958835773" duration="295000" />
+      <workItem from="1690958835773" duration="1423000" />
     </task>
     <task id="LOCAL-00001" summary="Fill more images">
       <option name="closed" value="true" />
@@ -148,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689868220261</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="more hybrid vehicles">
+      <option name="closed" value="true" />
+      <created>1690959602939</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690959602939</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +168,8 @@
     <MESSAGE value="add Volvo XC40 Recharge" />
     <MESSAGE value="pass detailed score from computings" />
     <MESSAGE value="WIP car detail color (should be more detailed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP car detail color (should be more detailed)" />
+    <MESSAGE value="more hybrid vehicles" />
+    <MESSAGE value="Fix Car.js for EV/PHEV" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Car.js for EV/PHEV" />
   </component>
 </project>
