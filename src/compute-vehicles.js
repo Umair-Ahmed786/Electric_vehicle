@@ -21,7 +21,7 @@ export function scorePHEVPositive(vehicle, config) {
         hybridSuperchargeIntervals,
         "supercharge"
     );
-console.log(superchargeScore, config.supercharge)
+
     const trunkScoreWeighted = trunkScore * config.trunk;
     const fuelTankScoreWeighted = fuelTankScore * config.tank;
     const consumptionScoreWeighted = fuelConsumptionScore * config.consumption;

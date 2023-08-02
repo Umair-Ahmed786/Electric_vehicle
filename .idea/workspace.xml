@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00231513-9f20-4c66-a1af-5d5270d7f2af" name="Changes" comment="Fix Car.js for EV/PHEV">
+    <list default="true" id="00231513-9f20-4c66-a1af-5d5270d7f2af" name="Changes" comment="clean up title, logs and favicon">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Car/Car.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Car/Car.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,32 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nicolasc\PROJETS\react-electric-vehicles\public" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.deploy">
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="predeploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="predeploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="start" />
@@ -55,6 +78,12 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.predeploy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -67,7 +96,7 @@
       <workItem from="1689767970154" duration="5000" />
       <workItem from="1689835169536" duration="17047000" />
       <workItem from="1690180554769" duration="3499000" />
-      <workItem from="1690958835773" duration="1423000" />
+      <workItem from="1690958835773" duration="5364000" />
     </task>
     <task id="LOCAL-00001" summary="Fill more images">
       <option name="closed" value="true" />
@@ -157,7 +186,39 @@
       <option name="project" value="LOCAL" />
       <updated>1690959602939</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fix Car.js for EV/PHEV">
+      <option name="closed" value="true" />
+      <created>1690960387288</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1690960387288</updated>
+    </task>
+    <task id="LOCAL-00013" summary="github pages deployment">
+      <option name="closed" value="true" />
+      <created>1690960574650</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1690960574650</updated>
+    </task>
+    <task id="LOCAL-00014" summary="clean up title, logs and favicon">
+      <option name="closed" value="true" />
+      <created>1690965571675</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1690965571675</updated>
+    </task>
+    <task id="LOCAL-00015" summary="clean up title, logs and favicon">
+      <option name="closed" value="true" />
+      <created>1690966167538</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1690966167538</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +231,8 @@
     <MESSAGE value="WIP car detail color (should be more detailed)" />
     <MESSAGE value="more hybrid vehicles" />
     <MESSAGE value="Fix Car.js for EV/PHEV" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Car.js for EV/PHEV" />
+    <MESSAGE value="github pages deployment" />
+    <MESSAGE value="clean up title, logs and favicon" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up title, logs and favicon" />
   </component>
 </project>

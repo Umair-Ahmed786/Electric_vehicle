@@ -24,7 +24,6 @@ function App() {
                 const scoreGood = scorePHEVPositive(vehicle, config);
                 const scoreBad = scoreNegative(vehicle, config);
                 const score = Math.round((scoreGood.total + scoreBad.total) * 10) / 10;
-                console.warn(vehicle, scoreGood, scoreBad, score)
                 res.push({vehicle, score, scoreGood, scoreBad});
             });
         }
