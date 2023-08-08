@@ -1,6 +1,6 @@
-@use '../mixins' as mixins;
+@use '../styles/mixins' as mixins;
 
-.configurator {
+.App-content .configurator {
   @include mixins.style-value-breakpoints(width, 9%, 14%, 30%, 25%, 25%);
   margin-top: -64px;
 

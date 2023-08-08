@@ -14,18 +14,19 @@ function HybridConfigurator({configurationChanged}) {
     const [practicality, setPracticality] = useState(4);
 
     useEffect(() => {
-        configurationChanged({
-            trunk,
-            tank,
-            consumption,
-            supercharge,
-            quality,
-            practicality,
-            look,
-            price,
-            volume
-        })
-    }, [])
+            configurationChanged({
+                trunk,
+                tank,
+                consumption,
+                supercharge,
+                quality,
+                practicality,
+                look,
+                price,
+                volume
+            })
+        },  // eslint-disable-next-line react-hooks/exhaustive-deps
+        [])
 
     return (
         <div className="configurator">

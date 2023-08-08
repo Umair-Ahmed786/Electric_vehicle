@@ -1,4 +1,4 @@
-@use '../../mixins' as mixins;
+@use '../../styles/mixins' as mixins;
 
 .results-table {
   @include mixins.style-value-breakpoints(width, 30%, 45%, 100%, 100%, 100%, true);

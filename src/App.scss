@@ -1,7 +1,13 @@
-@use 'mixins' as mixins;
+@use './styles/mixins' as mixins;
 
 .App {
   text-align: center;
+
+  .open-drawer-button {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+  }
 }
 
 .App-header {
@@ -19,9 +25,20 @@
   .results-table {
     margin-left: 32px;
     margin-right: 32px;
+    margin-bottom: 96px;
   }
 
   .car-table {
     margin-right: 32px;
+  }
+}
+
+.configurator-drawer .configurator {
+  width: 184px;
+  margin: 0 32px;
+
+  button {
+    margin-top: 16px;
+    width: 100%;
   }
 }

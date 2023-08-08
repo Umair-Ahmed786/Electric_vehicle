@@ -32,7 +32,6 @@ function Results({results, resultSelected}) {
                 </TableBody>
             </Table>
         </TableContainer>
-        // <div className='results'>{JSON.stringify(results)}</div>
     );
 }
 

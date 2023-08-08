@@ -14,18 +14,19 @@ function ElectricConfigurator({configurationChanged}) {
     const [practicality, setPracticality] = useState(4);
 
     useEffect(() => {
-        configurationChanged({
-            trunk,
-            range,
-            consumption,
-            supercharge,
-            quality,
-            practicality,
-            look,
-            price,
-            volume
-        })
-    }, [])
+            configurationChanged({
+                trunk,
+                range,
+                consumption,
+                supercharge,
+                quality,
+                practicality,
+                look,
+                price,
+                volume
+            })
+        }, // eslint-disable-next-line react-hooks/exhaustive-deps
+        [])
 
     return (
         <div className="configurator">

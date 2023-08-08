@@ -1,4 +1,7 @@
-import React, {useState} from 'react';
+import Drawer from '@mui/material/Drawer';
+import Fab from '@mui/material/Fab';
+import BuildRoundedIcon from '@mui/icons-material/BuildRounded';
+import React, {Fragment, useState} from 'react';
 import './App.scss';
 import ElectricConfigurator from "./components/ElectricConfigurator/ElectricConfigurator";
 import Results from './components/Results/Results';
@@ -34,6 +37,7 @@ function App() {
         setResults(res);
     }
 
+    const [drawerOpen, setDrawerOpen] = React.useState(false);
     const [results, setResults] = useState([]);
     const [result, setResult] = useState(null);
     const [tabValue, setTabValue] = useState(0);
@@ -53,7 +57,8 @@ function App() {
 
             {tabValue === 0 && (
                 <section className="App-content">
-                    <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')}/>
+                    {matchesGtMD && (
+                        <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')}/>)}
                     <Results results={results} resultSelected={(r) => setResult(r)}/>
                     <Car result={result} type="EV"/>
                 </section>
@@ -61,11 +66,28 @@ function App() {
 
             {tabValue === 1 && (
                 <section className="App-content">
-                    <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>
+                    {matchesGtMD && (
+                        <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>)}
                     <Results results={results} resultSelected={(r) => setResult(r)}/>
                     <Car result={result} type="PHEV"/>
                 </section>
             )}
+
+            {!matchesGtMD && (
+                <Fab onClick={() => setDrawerOpen(true)} variant="contained" color="secondary" aria-label="Configure"
+                     className="open-drawer-button"><BuildRoundedIcon/></Fab>)}
+
+            <Fragment key="right">
+                <Drawer anchor="right"
+                        open={drawerOpen}
+                        onClose={() => setDrawerOpen(false)}
+                        className="configurator-drawer">
+                    {tabValue === 0 && (
+                        <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')}/>)}
+                    {tabValue === 1 && (
+                        <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>)}
+                </Drawer>
+            </Fragment>
         </div>
     )
 }
