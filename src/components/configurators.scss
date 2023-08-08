@@ -3,10 +3,16 @@
 .App-content .configurator {
   @include mixins.style-value-breakpoints(width, 9%, 14%, 30%, 25%, 25%);
   margin-top: -64px;
+}
 
+.configurator {
   .goods, .bads {
     display: flex;
     flex-direction: column;
+
+    h4 {
+      margin: var(--small-margin) 0;
+    }
   }
 
   .bads {

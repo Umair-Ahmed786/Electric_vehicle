@@ -88,3 +88,7 @@ $overlapping-lt: (
     }
   }
 }
+
+@mixin style-simple-breakpoints($style, $default, $small, $important :false) {
+  @include style-value-breakpoints($style, $default, $default, $default, $small, $small, $important)
+}

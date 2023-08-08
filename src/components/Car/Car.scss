@@ -25,6 +25,7 @@
     .good {
       background-color: rgba(lightgreen, 0.3);
     }
+
     .amazing {
       background-color: rgba(green, 0.8);
     }
@@ -40,7 +41,7 @@
 
   .car-images {
     flex: 1;
-    margin-right: 32px;
+    margin-right: var(--default-margin);
 
     @media(min-width: 1920px) {
       display: flex;

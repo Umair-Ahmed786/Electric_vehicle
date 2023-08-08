@@ -1,7 +1,7 @@
 import Drawer from '@mui/material/Drawer';
 import Fab from '@mui/material/Fab';
 import BuildRoundedIcon from '@mui/icons-material/BuildRounded';
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import './App.scss';
 import ElectricConfigurator from "./components/ElectricConfigurator/ElectricConfigurator";
 import Results from './components/Results/Results';
@@ -37,7 +37,7 @@ function App() {
         setResults(res);
     }
 
-    const [drawerOpen, setDrawerOpen] = React.useState(false);
+    const [drawerOpen, setDrawerOpen] = React.useState(true);
     const [results, setResults] = useState([]);
     const [result, setResult] = useState(null);
     const [tabValue, setTabValue] = useState(0);
@@ -45,11 +45,22 @@ function App() {
     const matchesGtMD = useMediaQuery('(min-width:960px)');
 
     const configurationChanged = (config, datasetName) => computeResults(config, datasetName)
-    const handleTabChange = (event, newTabValue) => setTabValue(newTabValue);
+    const handleTabChange = (event, newTabValue) => {
+        setTabValue(newTabValue);
+        setTimeout(() => {
+            setDrawerOpen(true);
+            setTimeout(() => setDrawerOpen(false));
+        });
+    }
+
+    useEffect(() => {
+            setDrawerOpen(false);
+        },// eslint-disable-next-line react-hooks/exhaustive-deps
+        [])
 
     return (
         <div className="App">
-            <header className="App-header"><h1>Choix d'une voiture électrique</h1></header>
+            <header className="App-header"><h1>Quelle voiture ?</h1></header>
             <Tabs value={tabValue} onChange={handleTabChange} centered>
                 <Tab label="Electrique"/>
                 <Tab label="Hybride rechargeable (PHEV)"/>

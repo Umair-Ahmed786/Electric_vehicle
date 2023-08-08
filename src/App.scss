@@ -1,12 +1,17 @@
 @use './styles/mixins' as mixins;
 
+body {
+  --default-margin: 32px;
+  --small-margin: 16px;
+}
+
 .App {
   text-align: center;
 
   .open-drawer-button {
     position: fixed;
-    bottom: 16px;
-    right: 16px;
+    bottom: var(--small-margin);
+    right: var(--small-margin);
   }
 }
 
@@ -19,26 +24,28 @@
   align-items: flex-start;
 
   .configurator {
-    margin-left: 32px;
+    margin-left: var(--default-margin);
   }
 
   .results-table {
-    margin-left: 32px;
-    margin-right: 32px;
-    margin-bottom: 96px;
+    @include mixins.style-simple-breakpoints(margin, 0 var(--default-margin) 96px, 0 var(--small-margin) 96px)
   }
 
   .car-table {
-    margin-right: 32px;
+    margin-right: var(--default-margin);
   }
 }
 
 .configurator-drawer .configurator {
   width: 184px;
-  margin: 0 32px;
+  margin: 0 var(--default-margin);
 
   button {
-    margin-top: 16px;
+    margin-top: var(--small-margin);
     width: 100%;
   }
+}
+
+.MuiBackdrop-root {
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
