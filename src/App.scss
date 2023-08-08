@@ -1,3 +1,5 @@
+@use 'mixins' as mixins;
+
 .App {
   text-align: center;
 }
@@ -9,4 +11,17 @@
 .App-content {
   display: flex;
   align-items: flex-start;
+
+  .configurator {
+    margin-left: 32px;
+  }
+
+  .results-table {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+  .car-table {
+    margin-right: 32px;
+  }
 }

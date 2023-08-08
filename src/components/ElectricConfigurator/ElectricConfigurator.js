@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './ElectricConfigurator.scss';
+import '../configurators.scss';
 import {Button, TextField} from "@mui/material";
 
 function ElectricConfigurator({configurationChanged}) {

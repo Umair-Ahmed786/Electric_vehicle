@@ -1,20 +1,22 @@
+@use '../../mixins' as mixins;
+
 .car {
   display: flex;
   flex: 1;
+  width: 100%;
 
   @media(max-width: 1367px) {
     flex-wrap: wrap;
   }
 
   .car-table {
-    width: 20vw;
-
-    @media(max-width: 1367px) {
-      width: 28vw;
-    }
-
-    margin: 0 32px;
     height: fit-content;
+    @include mixins.layout-bp(xl) {
+      width: 40%
+    }
+    @include mixins.layout-bp(lg) {
+      width: 100%
+    }
 
     .amazing {
       background-color: lightgreen;
@@ -48,13 +50,8 @@
     }
 
     img {
-      max-width: 20vw;
+      max-width: 256px;
       max-height: 21vh;
-    }
-
-    div.space {
-      height: 32px;
-      width: 100%;
     }
   }
 }

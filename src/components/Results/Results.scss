@@ -1,10 +1,7 @@
-.results-table {
-  width: 30vw !important;
-  @media(max-width: 1367px) {
-    width: 45vw !important;
-  }
+@use '../../mixins' as mixins;
 
-  margin-left: 32px;
+.results-table {
+  @include mixins.style-value-breakpoints(width, 30%, 45%, 100%, 100%, 100%, true);
 
   tbody tr {
     &:first-of-type {

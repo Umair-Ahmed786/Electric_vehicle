@@ -8,6 +8,7 @@ import hybridVehicles from './datasets/hybrid-vehicles.json'
 import {scoreNegative, scorePHEVPositive, scorePositive, sortByScore} from './compute-vehicles';
 import {Tab, Tabs} from "@mui/material";
 import HybridConfigurator from "./components/HybridConfigurator/HybridConfigurator";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function App() {
     const computeResults = (config, datasetName) => {
@@ -33,10 +34,13 @@ function App() {
         setResults(res);
     }
 
-    const configurationChanged = (config, datasetName) => computeResults(config, datasetName)
     const [results, setResults] = useState([]);
     const [result, setResult] = useState(null);
     const [tabValue, setTabValue] = useState(0);
+    const matchesGtLG = useMediaQuery('(min-width:1280px)');
+    const matchesGtMD = useMediaQuery('(min-width:960px)');
+
+    const configurationChanged = (config, datasetName) => computeResults(config, datasetName)
     const handleTabChange = (event, newTabValue) => setTabValue(newTabValue);
 
     return (
