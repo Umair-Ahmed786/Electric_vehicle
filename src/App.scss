@@ -46,6 +46,20 @@ body {
   }
 }
 
+.car-dialog .car-table {
+  padding: 0 var(--small-margin);
+}
+
 .MuiBackdrop-root {
   background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.MuiDialogTitle-root {
+  display: flex;
+  align-items: center;
+  padding-right: calc(#{var(--small-margin)} / 2) !important;
+
+  > span {
+    flex: 1;
+  }
 }

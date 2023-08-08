@@ -1,6 +1,10 @@
 import Drawer from '@mui/material/Drawer';
 import Fab from '@mui/material/Fab';
+import IconButton from '@mui/material/IconButton';
+import Dialog from '@mui/material/Dialog';
+import DialogTitle from '@mui/material/DialogTitle';
 import BuildRoundedIcon from '@mui/icons-material/BuildRounded';
+import CancelRounded from '@mui/icons-material/CancelRounded';
 import React, {Fragment, useEffect, useState} from 'react';
 import './App.scss';
 import ElectricConfigurator from "./components/ElectricConfigurator/ElectricConfigurator";
@@ -38,6 +42,7 @@ function App() {
     }
 
     const [drawerOpen, setDrawerOpen] = React.useState(true);
+    const [dialogOpen, setDialogOpen] = React.useState(false);
     const [results, setResults] = useState([]);
     const [result, setResult] = useState(null);
     const [tabValue, setTabValue] = useState(0);
@@ -46,11 +51,18 @@ function App() {
 
     const configurationChanged = (config, datasetName) => computeResults(config, datasetName)
     const handleTabChange = (event, newTabValue) => {
+        setResult(null);
         setTabValue(newTabValue);
         setTimeout(() => {
             setDrawerOpen(true);
             setTimeout(() => setDrawerOpen(false));
         });
+    }
+    const handleResultSelected = (result) => {
+        setResult(result)
+        if (!matchesGtLG) {
+            setDialogOpen(true)
+        }
     }
 
     useEffect(() => {
@@ -70,8 +82,8 @@ function App() {
                 <section className="App-content">
                     {matchesGtMD && (
                         <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')}/>)}
-                    <Results results={results} resultSelected={(r) => setResult(r)}/>
-                    <Car result={result} type="EV"/>
+                    <Results results={results} resultSelected={(result) => handleResultSelected(result)}/>
+                    {matchesGtLG && (<Car result={result} type="EV"/>)}
                 </section>
             )}
 
@@ -79,8 +91,8 @@ function App() {
                 <section className="App-content">
                     {matchesGtMD && (
                         <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>)}
-                    <Results results={results} resultSelected={(r) => setResult(r)}/>
-                    <Car result={result} type="PHEV"/>
+                    <Results results={results} resultSelected={(result) => handleResultSelected(result)}/>
+                    {matchesGtLG && (<Car result={result} type="PHEV"/>)}
                 </section>
             )}
 
@@ -88,7 +100,7 @@ function App() {
                 <Fab onClick={() => setDrawerOpen(true)} variant="contained" color="secondary" aria-label="Configure"
                      className="open-drawer-button"><BuildRoundedIcon/></Fab>)}
 
-            <Fragment key="right">
+            <Fragment key="configurator-drawer">
                 <Drawer anchor="right"
                         open={drawerOpen}
                         onClose={() => setDrawerOpen(false)}
@@ -99,6 +111,19 @@ function App() {
                         <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>)}
                 </Drawer>
             </Fragment>
+
+            {result && (
+                <Dialog open={dialogOpen}
+                        onClose={() => setDialogOpen(false)} className="car-dialog">
+                    <DialogTitle>
+                        <span>{result.vehicle.name}</span>
+                        <IconButton onClick={() => setDialogOpen(false)}>
+                            <CancelRounded/>
+                        </IconButton>
+                    </DialogTitle>
+                    <Car result={result} type={tabValue === 0 ? 'EV' : 'PHEV'}/>
+                </Dialog>)
+            }
         </div>
     )
 }
