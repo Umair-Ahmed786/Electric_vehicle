@@ -3,6 +3,12 @@
 .results-table {
   @include mixins.style-value-breakpoints(width, 30%, 45%, 100%, 100%, 100%, true);
 
+  th, td {
+    @include mixins.layout-bp(lt-lg) {
+      padding: 4px 8px;
+    }
+  }
+
   tbody tr {
     &:first-of-type {
       background-color: gold;
