@@ -47,9 +47,13 @@ body {
 
 .car-dialog {
   .MuiDialog-paper {
-    .car-table {
-      padding: 0 var(--small-margin);
-      width: calc(100% - #{var(--small-margin)} * 2);
+    .car-dialog-content {
+      overflow-y: auto;
+
+      .car-table {
+        padding: 0 var(--small-margin);
+        width: calc(100% - #{var(--small-margin)} * 2);
+      }
     }
   }
 }
