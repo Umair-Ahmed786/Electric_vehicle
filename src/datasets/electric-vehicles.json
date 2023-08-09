@@ -1,6 +1,7 @@
 [
   {
     "consumption": 17.8,
+    "id": 1,
     "look": 4,
     "name": "Audi Q4 40 e-tron",
     "practicality": 3.5,
@@ -19,6 +20,7 @@
   },
   {
     "consumption": 17.8,
+    "id": 2,
     "look": 4,
     "name": "Audi Q4 40 e-tron Sportsback",
     "practicality": 3.5,
@@ -37,6 +39,7 @@
   },
   {
     "consumption": 17.9,
+    "id": 3,
     "look": 3.5,
     "name": "BMW iX1",
     "practicality": 3.5,
@@ -55,6 +58,7 @@
   },
   {
     "consumption": 20.5,
+    "id": 4,
     "look": 3.5,
     "name": "Ford Mustang Mach-E Premium 99kWh",
     "practicality": 3.5,
@@ -73,6 +77,7 @@
   },
   {
     "consumption": 20.3,
+    "id": 5,
     "look": 1.5,
     "name": "Hyundai Ioniq 5 (77.4 kWh - 2RM)",
     "practicality": 2.5,
@@ -91,6 +96,7 @@
   },
   {
     "consumption": 19.7,
+    "id": 6,
     "look": 2,
     "name": "Kia EV6 (77.4 kWh - 2RM)",
     "practicality": 2.5,
@@ -109,6 +115,7 @@
   },
   {
     "consumption": 19.8,
+    "id": 7,
     "look": 0.5,
     "name": "Mercedes EQB 250",
     "practicality": 5,
@@ -127,6 +134,7 @@
   },
   {
     "consumption": 19.2,
+    "id": 8,
     "look": 3.5,
     "name": "Skoda Enyaq iV 80",
     "practicality": 3,
@@ -145,6 +153,7 @@
   },
   {
     "consumption": 19.6,
+    "id": 9,
     "look": 5,
     "name": "Tesla Model 3 Grande Autonomie",
     "practicality": 1,
@@ -163,6 +172,7 @@
   },
   {
     "consumption": 17.6,
+    "id": 10,
     "look": 4.5,
     "name": "Tesla Model Y Grande Autonomie",
     "practicality": 2,
@@ -181,6 +191,7 @@
   },
   {
     "consumption": 20.9,
+    "id": 11,
     "look": 2.5,
     "name": "Volkswagen ID4 Pro",
     "practicality": 2,
@@ -199,6 +210,7 @@
   },
   {
     "consumption": 20.9,
+    "id": 12,
     "look": 2.5,
     "name": "Volkswagen ID5 Pro",
     "practicality": 2,
@@ -217,6 +229,7 @@
   },
   {
     "consumption": 19.9,
+    "id": 13,
     "look": 3,
     "name": "Volvo XC40 Recharge",
     "practicality": 3.5,
