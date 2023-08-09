@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../configurators.scss';
-import { TextField } from '@mui/material';
+import TextField from '@mui/material/TextField';
 
 function ElectricConfigurator({ configurationChanged }) {
   const [trunk, setTrunk] = useState(2.5);

@@ -1,7 +1,7 @@
 [
   {
+    "code": "audi-q4",
     "consumption": 17.8,
-    "id": 1,
     "look": 4,
     "name": "Audi Q4 40 e-tron",
     "practicality": 3.5,
@@ -10,36 +10,24 @@
     "range": 494,
     "supercharge": 22,
     "trunk": 520,
-    "volume": 13.99,
-    "imgFront": "https://image-annonce.lacentrale.fr/1096x829/E111913483_STANDARD_0.jpg?version=1677502721",
-    "imgBack": "https://image-annonce.lacentrale.fr/1096x829/E111913483_STANDARD_14.jpg?version=1677502721",
-    "imgSide": "https://image-annonce.lacentrale.fr/1096x829/E111913483_STANDARD_2.jpg?version=1677502721",
-    "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/E111913483_STANDARD_6.jpg?version=1677502721",
-    "imgBackseats": "https://image-annonce.lacentrale.fr/1096x829/E111913483_STANDARD_15.jpg?version=1677502721",
-    "imgTrunk": "https://image-annonce.lacentrale.fr/1096x829/E111913483_STANDARD_11.jpg?version=1677502721"
+    "volume": 13.99
   },
   {
+    "code": "audi-q4-sportback",
     "consumption": 17.8,
-    "id": 2,
-    "look": 4,
-    "name": "Audi Q4 40 e-tron Sportsback",
+    "look": 3.5,
+    "name": "Audi Q4 40 e-tron Sportback",
     "practicality": 3.5,
     "price": 60750,
     "quality": 4,
     "range": 494,
     "supercharge": 22,
     "trunk": 535,
-    "volume": 13.82,
-    "imgFront": "https://image-annonce.lacentrale.fr/1096x829/E111730696_STANDARD_1.jpg?version=1677636591",
-    "imgBack": "https://image-annonce.lacentrale.fr/1096x829/E111730696_STANDARD_11.jpg?version=1677636591",
-    "imgSide": "https://images.caradisiac.com/images/2/9/1/0/192910/S0-essai-audi-q4-sportback-e-tron-2021-le-concept-qui-s-est-echappe-695724.jpg",
-    "imgDashboard": "https://cdn.lesnumeriques.com/optim/test/18/185785/f33314de-audi-q4-e-tron-sportback-40-entre-passion-et-raison__w1280_wtmk.jpeg",
-    "imgBackseats": "https://image-annonce.lacentrale.fr/1096x829/E111730696_STANDARD_12.jpg?version=1677636591",
-    "imgTrunk": "https://image-annonce.lacentrale.fr/1096x829/E111730696_STANDARD_9.jpg?version=1677636591"
+    "volume": 13.82
   },
   {
+    "code": "bmw-ix1",
     "consumption": 17.9,
-    "id": 3,
     "look": 3.5,
     "name": "BMW iX1",
     "practicality": 3.5,
@@ -48,17 +36,11 @@
     "range": 420,
     "supercharge": 23,
     "trunk": 490,
-    "volume": 13.49,
-    "imgFront": "https://media.autoexpress.co.uk/image/private/s--4lJX6_3m--/f_auto,t_content-image-full-desktop@1/v1681850894/autoexpress/2023/04/BMW%20iX1%20xLine%20002_nbhwie.jpg",
-    "imgBack": "https://media.autoexpress.co.uk/image/private/s--2DVShVRX--/f_auto,t_content-image-full-desktop@1/v1681850892/autoexpress/2023/04/BMW%20iX1%20xLine%20026_d3nclc.jpg",
-    "imgSide": "https://image-annonce.lacentrale.fr/1096x829/E112568085_STANDARD_1.jpg?version=1689009458",
-    "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/E112568085_STANDARD_10.jpg?version=1689009458",
-    "imgBackseats": "https://images.caradisiac.com/images/9/1/3/9/199139/S1-essai-bmw-ix1-xdrive30-2022-si-logique-electrique-735051.jpg",
-    "imgTrunk": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTZ8VyTuUdn__9RT3FIE_IM2VMbGjQQr2_ADrzlm3VBbbUbBpEgnxJaSWgAqeHgLpNU9I&usqp=CAU"
+    "volume": 13.49
   },
   {
+    "code": "ford-mustang-mach-e-premium",
     "consumption": 20.5,
-    "id": 4,
     "look": 3.5,
     "name": "Ford Mustang Mach-E Premium 99kWh",
     "practicality": 3.5,
@@ -67,17 +49,11 @@
     "range": 583,
     "supercharge": 26,
     "trunk": 502,
-    "volume": 13.64,
-    "imgFront": "https://image-annonce.lacentrale.fr/1096x829/E111091025_STANDARD_0.jpg?version=1681223424",
-    "imgBack": "https://image-annonce.lacentrale.fr/1096x829/E112463442_STANDARD_12.jpg?version=1689667433",
-    "imgSide": "https://image-annonce.lacentrale.fr/1096x829/E112463442_STANDARD_1.jpg?version=1689667433",
-    "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/E111091025_STANDARD_6.jpg?version=1681223424",
-    "imgBackseats": "https://image-annonce.lacentrale.fr/1096x829/E111142882_STANDARD_5.jpg?version=1664523702",
-    "imgTrunk": "https://image-annonce.lacentrale.fr/1096x829/E112385423_STANDARD_6.jpg?version=1687348894"
+    "volume": 13.64
   },
   {
+    "code": "hyundai-ioniq-5",
     "consumption": 20.3,
-    "id": 5,
     "look": 1.5,
     "name": "Hyundai Ioniq 5 (77.4 kWh - 2RM)",
     "practicality": 2.5,
@@ -86,17 +62,11 @@
     "range": 518,
     "supercharge": 20,
     "trunk": 584,
-    "volume": 14.12,
-    "imgFront": "https://image-annonce.lacentrale.fr/1096x829/E112539761_STANDARD_0.jpg?version=1688983563",
-    "imgBack": "https://image-annonce.lacentrale.fr/1096x829/E112539761_STANDARD_2.jpg?version=1688983563",
-    "imgSide": "https://image-annonce.lacentrale.fr/1096x829/E112340484_STANDARD_1.jpg?version=1687787430",
-    "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/E112539761_STANDARD_4.jpg?version=1688983562",
-    "imgBackseats": "https://image-annonce.lacentrale.fr/1096x829/E112539761_STANDARD_3.jpg?version=1688983562",
-    "imgTrunk": "data:image/jpeg;base64,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"
+    "volume": 14.12
   },
   {
+    "code": "kia-ev6",
     "consumption": 19.7,
-    "id": 6,
     "look": 2,
     "name": "Kia EV6 (77.4 kWh - 2RM)",
     "practicality": 2.5,
@@ -105,17 +75,11 @@
     "range": 532,
     "supercharge": 21,
     "trunk": 572,
-    "volume": 13.64,
-    "imgFront": "https://image-annonce.lacentrale.fr/1096x829/E112314676_STANDARD_0.jpg?version=1686829681",
-    "imgBack": "https://image-annonce.lacentrale.fr/1096x829/E112314676_STANDARD_2.jpg?version=1686829681",
-    "imgSide": "https://cdn.motor1.com/images/mgl/ljrAE/s1/kia-ev6.webp",
-    "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/E111358968_STANDARD_5.jpg?version=1689736298",
-    "imgBackseats": "https://image-annonce.lacentrale.fr/1096x829/E112314676_STANDARD_4.jpg?version=1686829681",
-    "imgTrunk": "https://image-annonce.lacentrale.fr/1096x829/E112463363_STANDARD_9.jpg?version=1687263048"
+    "volume": 13.64
   },
   {
+    "code": "mercedes-eqb-250",
     "consumption": 19.8,
-    "id": 7,
     "look": 0.5,
     "name": "Mercedes EQB 250",
     "practicality": 5,
@@ -124,17 +88,11 @@
     "range": 478,
     "supercharge": 30,
     "trunk": 520,
-    "volume": 14.3,
-    "imgFront": "https://image-annonce.lacentrale.fr/1096x829/E112554470_STANDARD_1.jpg?version=1688637532",
-    "imgBack": "https://image-annonce.lacentrale.fr/1096x829/E112554470_STANDARD_5.jpg?version=1688637532",
-    "imgSide": "https://image-annonce.lacentrale.fr/1096x829/E112599595_STANDARD_0.jpg?version=1689737062",
-    "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/E112599595_STANDARD_13.jpg?version=1689737062",
-    "imgBackseats": "https://auto.cdn-rivamedia.com/photos/annonce/big/mercedes-eqb-350-292ch-amg-line-4matic-145507787.jpg",
-    "imgTrunk": "https://images.bfmtv.com/nDcPSyVyi2P2pusQd1WgHNOe5lM=/0x0:2048x1365/600x0/images/Essai-Mercedes-EQB-350-4Matic-1575924.jpg"
+    "volume": 14.3
   },
   {
+    "code": "skoda-enyaq",
     "consumption": 19.2,
-    "id": 8,
     "look": 3.5,
     "name": "Skoda Enyaq iV 80",
     "practicality": 3,
@@ -143,17 +101,11 @@
     "range": 520,
     "supercharge": 27,
     "trunk": 585,
-    "volume": 14.16,
-    "imgFront": "https://images.caradisiac.com/images/0/9/7/0/190970/S8-essai-skoda-enyaq-60-683760.jpg",
-    "imgBack": "https://www.blackbettymotors.com/skoda-enyaq-enyaq-iv-80--pack-drive-assist---garantie-24-mois--borne-offerte,fm-svositec!fd001!326681044!n.jpg",
-    "imgSide": "https://images.caradisiac.com/images/0/9/7/0/190970/S8-essai-skoda-enyaq-60-683753.jpg",
-    "imgDashboard": "https://images.caradisiac.com/images/0/9/7/0/190970/S8-essai-skoda-enyaq-60-683769.jpg",
-    "imgBackseats": "https://images.caradisiac.com/images/0/9/7/0/190970/S8-essai-skoda-enyaq-60-683765.jpg",
-    "imgTrunk": "https://feassets.bymycar.fr/vo/70/230242/10/skoda-enyaq-iv-80-occasion-2023-villefranche-sur-saone.jpg"
+    "volume": 14.16
   },
   {
+    "code": "tesla-model-3",
     "consumption": 19.6,
-    "id": 9,
     "look": 5,
     "name": "Tesla Model 3 Grande Autonomie",
     "practicality": 1,
@@ -162,17 +114,11 @@
     "range": 576,
     "supercharge": 21,
     "trunk": 542,
-    "volume": 12.49,
-    "imgFront": "https://olex.biz/2022/12/this-car-i-like-it-another/front_view.jpeg",
-    "imgBack": "https://i.ytimg.com/vi/SqjvcDdJvO4/maxresdefault.jpg",
-    "imgSide": "https://www.actu-automobile.com/wp-content/uploads/2023/07/Essai-Tesla-Model-3-2023_-60.jpg",
-    "imgDashboard": "https://cars.usnews.com/static/images/Auto/custom/15203/2023_Tesla_Model_3_Dashboard_1.jpg",
-    "imgBackseats": "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_cg__marking_background__sm_/v1/editorial/tesla-model-3-my23-rwd-tw-blue-1200x800-%2811%29_0.jpg",
-    "imgTrunk": "https://parkers-images.bauersecure.com/wp-images/672/boot-load-space/930x620/-tf-110.jpg"
+    "volume": 12.49
   },
   {
+    "code": "tesla-model-y",
     "consumption": 17.6,
-    "id": 10,
     "look": 4.5,
     "name": "Tesla Model Y Grande Autonomie",
     "practicality": 2,
@@ -181,18 +127,12 @@
     "range": 510,
     "supercharge": 21,
     "trunk": 971,
-    "volume": 14.77,
-    "imgFront": "https://image-annonce.lacentrale.fr/1096x829/W102664797_STANDARD_13.jpg?version=1684143971",
-    "imgBack": "https://image-annonce.lacentrale.fr/1096x829/W102664797_STANDARD_4.jpg?version=1684143971",
-    "imgSide": "https://image-annonce.lacentrale.fr/1096x829/W102712588_STANDARD_13.jpg?version=1688995033",
-    "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/W102664797_STANDARD_24.jpg?version=1684143971",
-    "imgBackseats": "https://image-annonce.lacentrale.fr/1096x829/W102712588_STANDARD_17.jpg?version=1688995033",
-    "imgTrunk": "https://images.caradisiac.com/images/2/9/6/0/202960/S0-essai-tesla-model-y-propulsion-la-meilleure-759808.jpg"
+    "volume": 14.77
   },
   {
+    "code": "volkswagen-id4",
     "consumption": 20.9,
-    "id": 11,
-    "look": 2.5,
+    "look": 3.5,
     "name": "Volkswagen ID4 Pro",
     "practicality": 2,
     "price": 56620,
@@ -200,17 +140,11 @@
     "range": 489,
     "supercharge": 27,
     "trunk": 543,
-    "volume": 13.9,
-    "imgFront": "https://rpmweb.ca/medias/Volkswagen-ID4-2023-sr-3.JPG",
-    "imgBack": "https://www.auto-mag.fr/wp-content/uploads/2023/04/volkswagen-id.7-2023-05.jpg",
-    "imgSide": "https://rpmweb.ca/medias/Volkswagen-ID4-2023-sr-8.JPG",
-    "imgDashboard": "https://cdn.jdpower.com/JDP_2023%20Volkswagen%20ID_4%20AWD%20Pro%20S%20Interior%20Dashboard(1).JPG",
-    "imgBackseats": "https://cdn.carbuzz.com/gallery-images/2023-volkswagen-id-4-back-seats-carbuzz-817837-1600.jpg",
-    "imgTrunk": "https://cdn.carbuzz.com/gallery-images/2023-volkswagen-id-4-cargo-room-carbuzz-1029149-1600.jpg"
+    "volume": 13.9
   },
   {
+    "code": "volkswagen-id5",
     "consumption": 20.9,
-    "id": 12,
     "look": 2.5,
     "name": "Volkswagen ID5 Pro",
     "practicality": 2,
@@ -219,17 +153,11 @@
     "range": 490,
     "supercharge": 27,
     "trunk": 549,
-    "volume": 13.7,
-    "imgFront": "https://img12.img-bcg.eu/auto24/560/258/173656258.jpg",
-    "imgBack": "https://totallyev.net/wp-content/uploads/2022/09/Volkswagen-ID.5-rear-looks.jpg",
-    "imgSide": "https://images.hgmsites.net/med/volkswagen-id-5_100813510_m.jpg",
-    "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/W102597533_STANDARD_5.jpg?version=1689163322",
-    "imgBackseats": "https://cleantechnica.com/files/2023/01/VW-ID.5-rear-seats-showing-ample-leg-space.jpg",
-    "imgTrunk": "https://www.myevreview.com/gr/images/63cfda0903063/63f6/63f64eb6c92b1-c.jpg"
+    "volume": 13.7
   },
   {
+    "code": "volvo-xc40-recharge",
     "consumption": 19.9,
-    "id": 13,
     "look": 3,
     "name": "Volvo XC40 Recharge",
     "practicality": 3.5,
@@ -238,12 +166,6 @@
     "range": 574,
     "supercharge": 23,
     "trunk": 452,
-    "volume": 13.89,
-    "imgFront": "https://cdn.jdpower.com/JDP_2022%20Volvo%20XC40%20Recharge%20Thunder%20Grey%20Front%20Quarter%20View.jpeg",
-    "imgBack": "https://topelectricsuv.com/wp-content/uploads/2022/02/2023-Volvo-XC40-Recharge-facelift-rear.jpg",
-    "imgSide": "https://ev-database.org/img/auto/Volvo_XC40_Recharge_2023/Volvo_XC40_Recharge_2023-01@2x.jpg",
-    "imgDashboard": "https://www.automotiveaddicts.com/wp-content/uploads/2023/04/2023-volvo-xc40-recharge-ultimate-dashboard.jpg",
-    "imgBackseats": "https://media.drivingelectric.com/image/private/s--HnrjV0re--/v1597795453/drivingelectric/2020-03/dsc_3736.jpg",
-    "imgTrunk": "https://www.topgear.com/sites/default/files/2023/05/10-Volvo-XC40-Recharge.jpg"
+    "volume": 13.89
   }
 ]

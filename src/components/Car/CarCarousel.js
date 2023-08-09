@@ -1,59 +1,39 @@
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './CarCarousel.scss';
 
 function CarCarousel({ vehicle }) {
-  if (vehicle) {
-    const hasImage =
-      !!vehicle.imgFront ||
-      !!vehicle.imgBack ||
-      !!vehicle.imgSide ||
-      !!vehicle.imgDashboard ||
-      !!vehicle.imgBackseats ||
-      !!vehicle.imgTrunk;
+  const imgExtension = 'avif';
 
-    if (hasImage) {
-      return (
-        <Carousel className="car-carousel">
-          {vehicle.imgFront && (
-            <div>
-              <img src={vehicle.imgFront} alt="Avant" />
-              <p className="legend">Avant</p>
-            </div>
-          )}
-          {vehicle.imgBack && (
-            <div>
-              <img src={vehicle.imgBack} alt="Arrière" />
-              <p className="legend">Arrière</p>
-            </div>
-          )}
-          {vehicle.imgSide && (
-            <div>
-              <img src={vehicle.imgSide} alt="Côté" />
-              <p className="legend">Côté</p>
-            </div>
-          )}
-          {vehicle.imgDashboard && (
-            <div>
-              <img src={vehicle.imgDashboard} alt="Tableau de bord" />
-              <p className="legend">Tableau de bord</p>
-            </div>
-          )}
-          {vehicle.imgBackseats && (
-            <div>
-              <img src={vehicle.imgBackseats} alt="Banquette arrière" />
-              <p className="legend">Banquette arrière</p>
-            </div>
-          )}
-          {vehicle.imgTrunk && (
-            <div>
-              <img src={vehicle.imgTrunk} alt="Coffre" />
-              <p className="legend">Coffre</p>
-            </div>
-          )}
-        </Carousel>
-      );
-    }
+  if (vehicle) {
+    return (
+      <Carousel statusFormatter={(currentItem, total) => `${currentItem} sur ${total}`} className='car-carousel'>
+        <div>
+          <img src={vehicle.imgFront ?? require(`../../datasets/img/${vehicle.code}_front.${imgExtension}`)} alt='Avant' />
+          <p className='legend'>Avant</p>
+        </div>
+        <div>
+          <img src={vehicle.imgBack ?? require(`../../datasets/img/${vehicle.code}_back.${imgExtension}`)} alt='Arrière' />
+          <p className='legend'>Arrière</p>
+        </div>
+        <div>
+          <img src={vehicle.imgSide ?? require(`../../datasets/img/${vehicle.code}_side.${imgExtension}`)} alt='Côté' />
+          <p className='legend'>Côté</p>
+        </div>
+        <div>
+          <img src={vehicle.imgDashboard ?? require(`../../datasets/img/${vehicle.code}_dashboard.${imgExtension}`)} alt='Tableau de bord' />
+          <p className='legend'>Tableau de bord</p>
+        </div>
+        <div>
+          <img src={vehicle.imgBackseats ?? require(`../../datasets/img/${vehicle.code}_backseats.${imgExtension}`)} alt='Banquette arrière' />
+          <p className='legend'>Banquette arrière</p>
+        </div>
+        <div>
+          <img src={vehicle.imgTrunk ?? require(`../../datasets/img/${vehicle.code}_trunk.${imgExtension}`)} alt='Coffre' />
+          <p className='legend'>Coffre</p>
+        </div>
+      </Carousel>
+    );
   }
 }
 

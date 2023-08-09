@@ -1,7 +1,7 @@
 [
   {
+    "code": "bmw-x1",
     "consumption": 7.6,
-    "id": 14,
     "look": 3,
     "name": "BMW X1",
     "practicality": 4,
@@ -13,8 +13,8 @@
     "volume": 13.63
   },
   {
+    "code": "ds-7-etense",
     "consumption": 9,
-    "id": 15,
     "look": 4.5,
     "name": "DS7 E-Tense 225",
     "practicality": 4,
@@ -26,8 +26,8 @@
     "volume": 14.2
   },
   {
+    "code": "hyundai-tucson",
     "consumption": 9.4,
-    "id": 16,
     "look": 4,
     "name": "Hyundai Tucson",
     "practicality": 3,
@@ -39,8 +39,8 @@
     "volume": 13.85
   },
   {
+    "code": "kia-sportage",
     "consumption": 8,
-    "id": 17,
     "look": 4,
     "name": "Kia Sportage PHEV",
     "practicality": 3.5,
@@ -52,8 +52,8 @@
     "volume": 13.85
   },
   {
+    "code": "lexus-nx",
     "consumption": 7.5,
-    "id": 18,
     "look": 4,
     "name": "Lexus NX 450h",
     "practicality": 4,
@@ -65,8 +65,8 @@
     "volume": 14.25
   },
   {
+    "code": "mercedes-cla-E-shooting-brake",
     "consumption": 7.8,
-    "id": 19,
     "look": 2,
     "name": "Mercedes CLA e Shooting Brake",
     "practicality": 3,
@@ -78,8 +78,8 @@
     "volume": 12.37
   },
   {
+    "code": "peugeot-308-sw",
     "consumption": 7.6,
-    "id": 20,
     "look": 3,
     "name": "Peugeot 308 SW Hybrid 180",
     "practicality": 3.5,
@@ -91,8 +91,8 @@
     "volume": 12.45
   },
   {
+    "code": "range-rover-evoque-s",
     "consumption": 11,
-    "id": 21,
     "look": 4,
     "name": "Range Rover Evoque S",
     "practicality": 4,
@@ -104,8 +104,8 @@
     "volume": 13.72
   },
   {
+    "code": "toyota-rav4",
     "consumption": 6,
-    "id": 22,
     "look": 3.5,
     "name": "Toyota RAV4",
     "practicality": 4,

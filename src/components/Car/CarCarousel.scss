@@ -10,5 +10,10 @@
 
   .carousel {
     @include mixins.style-value-breakpoints(max-width, 640px, 640px, 512px, 512px, 512px);
+
+    .slide .legend {
+      width: 25%;
+      margin-left: -12.5%;
+    }
   }
 }
