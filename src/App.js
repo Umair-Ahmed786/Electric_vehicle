@@ -6,10 +6,12 @@ import DialogTitle from '@mui/material/DialogTitle';
 import BuildRoundedIcon from '@mui/icons-material/BuildRounded';
 import CancelRounded from '@mui/icons-material/CancelRounded';
 import React, {Fragment, useEffect, useState} from 'react';
+import {useTheme} from '@mui/material/styles';
 import './App.scss';
 import ElectricConfigurator from "./components/ElectricConfigurator/ElectricConfigurator";
 import Results from './components/Results/Results';
 import Car from './components/Car/Car';
+import CarCarousel from './components/Car/CarCarousel';
 import electricVehicles from './datasets/electric-vehicles.json'
 import hybridVehicles from './datasets/hybrid-vehicles.json'
 import {scoreNegative, scorePHEVPositive, scorePositive, sortByScore} from './compute-vehicles';
@@ -46,7 +48,9 @@ function App() {
     const [results, setResults] = useState([]);
     const [result, setResult] = useState(null);
     const [tabValue, setTabValue] = useState(0);
+    const theme = useTheme();
     const matchesGtLG = useMediaQuery('(min-width:1280px)');
+    const matchesLG = useMediaQuery(theme.breakpoints.up('lg'));
     const matchesGtMD = useMediaQuery('(min-width:960px)');
 
     const configurationChanged = (config, datasetName) => computeResults(config, datasetName)
@@ -70,62 +74,59 @@ function App() {
         },// eslint-disable-next-line react-hooks/exhaustive-deps
         [])
 
-    return (
-        <div className="App">
-            <header className="App-header"><h1>Quelle voiture ?</h1></header>
-            <Tabs value={tabValue} onChange={handleTabChange} centered>
-                <Tab label="Electrique"/>
-                <Tab label="Hybride rechargeable (PHEV)"/>
-            </Tabs>
+    return (<div className="App">
+        <header className="App-header"><h1>Quelle voiture ?</h1></header>
+        <Tabs value={tabValue} onChange={handleTabChange} centered>
+            <Tab label="Electrique"/>
+            <Tab label="Hybride rechargeable (PHEV)"/>
+        </Tabs>
 
-            {tabValue === 0 && (
-                <section className="App-content">
-                    {matchesGtMD && (
-                        <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')}/>)}
-                    <Results results={results} resultSelected={(result) => handleResultSelected(result)}/>
-                    {matchesGtLG && (<Car result={result} type="EV"/>)}
-                </section>
-            )}
+        {tabValue === 0 && (<section className="App-content">
+            {matchesGtMD && (
+                <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')}/>)}
+            <Results results={results} resultSelected={(result) => handleResultSelected(result)}/>
+            {matchesGtLG && <Car result={result} type="EV"/>}
+            {matchesGtLG && <CarCarousel vehicle={result?.vehicle}/>}
+        </section>)}
 
-            {tabValue === 1 && (
-                <section className="App-content">
-                    {matchesGtMD && (
-                        <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>)}
-                    <Results results={results} resultSelected={(result) => handleResultSelected(result)}/>
-                    {matchesGtLG && (<Car result={result} type="PHEV"/>)}
-                </section>
-            )}
+        {tabValue === 1 && (<section className="App-content">
+            {matchesGtMD && (
+                <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>)}
+            <Results results={results} resultSelected={(result) => handleResultSelected(result)}/>
+            {matchesGtLG && (<Car result={result} type="PHEV"/>)}
+            {matchesGtLG && <CarCarousel vehicle={result?.vehicle}/>}
+        </section>)}
 
-            {!matchesGtMD && (
-                <Fab onClick={() => setDrawerOpen(true)} variant="contained" color="secondary" aria-label="Configure"
-                     className="open-drawer-button"><BuildRoundedIcon/></Fab>)}
+        {!matchesGtMD && (
+            <Fab onClick={() => setDrawerOpen(true)} variant="contained" color="secondary" aria-label="Configure"
+                 className="open-drawer-button"><BuildRoundedIcon/></Fab>)}
 
-            <Fragment key="configurator-drawer">
-                <Drawer anchor="right"
-                        open={drawerOpen}
-                        onClose={() => setDrawerOpen(false)}
-                        className="configurator-drawer">
-                    {tabValue === 0 && (
-                        <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')}/>)}
-                    {tabValue === 1 && (
-                        <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>)}
-                </Drawer>
-            </Fragment>
+        <Fragment key="configurator-drawer">
+            <Drawer anchor="right"
+                    open={drawerOpen}
+                    onClose={() => setDrawerOpen(false)}
+                    className="configurator-drawer">
+                {tabValue === 0 && (
+                    <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')}/>)}
+                {tabValue === 1 && (
+                    <HybridConfigurator configurationChanged={(config) => configurationChanged(config, 'PHEV')}/>)}
+            </Drawer>
+        </Fragment>
 
-            {result && (
-                <Dialog open={dialogOpen}
-                        onClose={() => setDialogOpen(false)} className="car-dialog">
-                    <DialogTitle>
-                        <span>{result.vehicle.name}</span>
-                        <IconButton onClick={() => setDialogOpen(false)}>
-                            <CancelRounded/>
-                        </IconButton>
-                    </DialogTitle>
-                    <Car result={result} type={tabValue === 0 ? 'EV' : 'PHEV'}/>
-                </Dialog>)
-            }
-        </div>
-    )
+        {result && <Dialog open={dialogOpen}
+                           onClose={() => setDialogOpen(false)} className="car-dialog">
+            <DialogTitle>
+                <span>{result.vehicle.name}</span>
+                <IconButton onClick={() => setDialogOpen(false)}>
+                    <CancelRounded/>
+                </IconButton>
+            </DialogTitle>
+            <section className="car-dialog-content">
+                <Car result={result} type={tabValue === 0 ? 'EV' : 'PHEV'}/>
+                <CarCarousel vehicle={result.vehicle}/>
+            </section>
+        </Dialog>}
+    </div>)
 }
 
 export default App;

@@ -1,58 +1,31 @@
 @use '../../styles/mixins' as mixins;
 
-.car {
-  display: flex;
-  flex: 1;
-  width: 100%;
-
-  @media(max-width: 1367px) {
-    flex-wrap: wrap;
+.car-table {
+  height: fit-content;
+  @include mixins.layout-bp(xl) {
+    max-width: 376px;
+  }
+  @include mixins.layout-bp(lg) {
+    width: 100%
   }
 
-  .car-table {
-    height: fit-content;
-    @include mixins.layout-bp(xl) {
-      width: 40%
-    }
-    @include mixins.layout-bp(lg) {
-      width: 100%
-    }
-
-    .amazing {
-      background-color: lightgreen;
-    }
-
-    .good {
-      background-color: rgba(lightgreen, 0.3);
-    }
-
-    .amazing {
-      background-color: rgba(green, 0.8);
-    }
-
-    .bad {
-      background-color: rgba(lightpink, 0.3);
-    }
-
-    .trash {
-      background-color: rgba(red, 0.3);
-    }
+  .amazing {
+    background-color: lightgreen;
   }
 
-  .car-images {
-    flex: 1;
-    margin-right: var(--default-margin);
+  .good {
+    background-color: rgba(lightgreen, 0.3);
+  }
 
-    @media(min-width: 1920px) {
-      display: flex;
-      align-items: flex-start;
-      align-content: flex-start;
-      flex-wrap: wrap;
-    }
+  .amazing {
+    background-color: rgba(green, 0.8);
+  }
 
-    img {
-      max-width: 256px;
-      max-height: 21vh;
-    }
+  .bad {
+    background-color: rgba(lightpink, 0.3);
+  }
+
+  .trash {
+    background-color: rgba(red, 0.3);
   }
 }

@@ -1,7 +1,7 @@
 @use '../../styles/mixins' as mixins;
 
 .results-table {
-  @include mixins.style-value-breakpoints(width, 30%, 45%, 100%, 100%, 100%, true);
+  @include mixins.style-value-breakpoints(width, 30%, 45%, 70%, 100%, 100%, true);
 
   th, td {
     @include mixins.layout-bp(lt-lg) {

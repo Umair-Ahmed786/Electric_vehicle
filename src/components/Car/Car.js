@@ -22,68 +22,54 @@ function classBad(scoreBad) {
 
 function Car({result, type}) {
     if (result) {
-        return (
-            <section className="car">
-                <TableContainer component={Paper} className="car-table">
-                    <Table>
-                        <TableBody>
-                            <TableRow>
-                                <TableCell>Nom</TableCell>
-                                <TableCell>{result.vehicle.name}</TableCell>
-                            </TableRow>
-                            <TableRow
-                                className={classBad(result.scoreBad.price)}>
-                                <TableCell sx={{fontWeight: "bold"}}>Prix</TableCell>
-                                <TableCell
-                                    sx={{fontWeight: "bold"}}>{result.vehicle.price.toLocaleString()} €</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>Coffre</TableCell>
-                                <TableCell>{result.vehicle.trunk} L</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>{type === 'EV' ? 'Autonomie' : 'Réservoir'}</TableCell>
-                                <TableCell>{type === 'EV' ? `${result.vehicle.range} km` : `${result.vehicle.tank} L`}</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>Consommation</TableCell>
-                                <TableCell>{result.vehicle.consumption} {type === 'EV' ? 'kWh/100km' : 'L/100km'}</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>Supercharge</TableCell>
-                                <TableCell>{result.vehicle.supercharge} min</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>Volume</TableCell>
-                                <TableCell>{result.vehicle.volume} m³</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>Qualité</TableCell>
-                                <TableCell>{result.vehicle.quality} /5</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>Praticité</TableCell>
-                                <TableCell>{result.vehicle.practicality} /5</TableCell>
-                            </TableRow>
-                            <TableRow>
-                                <TableCell>Esthétique</TableCell>
-                                <TableCell>{result.vehicle.look} /5</TableCell>
-                            </TableRow>
-                        </TableBody>
-                    </Table>
-                </TableContainer>
-
-                <div className="car-images">
-                    {result.vehicle.imgFront && <img src={result.vehicle.imgFront} alt="Avant"/>}
-                    {result.vehicle.imgBack && <img src={result.vehicle.imgBack} alt="Arrière"/>}
-                    {result.vehicle.imgSide && <img src={result.vehicle.imgSide} alt="Profil"/>}
-                    <div className="space"></div>
-                    {result.vehicle.imgDashboard && <img src={result.vehicle.imgDashboard} alt="Tableau de bord"/>}
-                    {result.vehicle.imgBackseats && <img src={result.vehicle.imgBackseats} alt="Banquette"/>}
-                    {result.vehicle.imgTrunk && <img src={result.vehicle.imgTrunk} alt="Coffre"/>}
-                </div>
-            </section>
-        )
+        return (<TableContainer component={Paper} className="car-table">
+            <Table>
+                <TableBody>
+                    <TableRow>
+                        <TableCell>Nom</TableCell>
+                        <TableCell>{result.vehicle.name}</TableCell>
+                    </TableRow>
+                    <TableRow
+                        className={classBad(result.scoreBad.price)}>
+                        <TableCell sx={{fontWeight: "bold"}}>Prix</TableCell>
+                        <TableCell
+                            sx={{fontWeight: "bold"}}>{result.vehicle.price.toLocaleString()} €</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Coffre</TableCell>
+                        <TableCell>{result.vehicle.trunk} L</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>{type === 'EV' ? 'Autonomie' : 'Réservoir'}</TableCell>
+                        <TableCell>{type === 'EV' ? `${result.vehicle.range} km` : `${result.vehicle.tank} L`}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Consommation</TableCell>
+                        <TableCell>{result.vehicle.consumption} {type === 'EV' ? 'kWh/100km' : 'L/100km'}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Supercharge</TableCell>
+                        <TableCell>{result.vehicle.supercharge} min</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Volume</TableCell>
+                        <TableCell>{result.vehicle.volume} m³</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Qualité</TableCell>
+                        <TableCell>{result.vehicle.quality} /5</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Praticité</TableCell>
+                        <TableCell>{result.vehicle.practicality} /5</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Esthétique</TableCell>
+                        <TableCell>{result.vehicle.look} /5</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
+        </TableContainer>)
     }
 }
 
