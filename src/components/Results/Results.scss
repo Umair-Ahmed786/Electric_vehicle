@@ -3,7 +3,8 @@
 .results-table {
   @include mixins.style-value-breakpoints(width, 30%, 45%, 70%, 100%, 100%, true);
 
-  th, td {
+  th,
+  td {
     @include mixins.layout-bp(lt-lg) {
       padding: 4px 8px;
     }
@@ -33,7 +34,7 @@
 
     &:hover {
       cursor: pointer;
-      opacity: .6;
+      opacity: 0.6;
     }
   }
 }

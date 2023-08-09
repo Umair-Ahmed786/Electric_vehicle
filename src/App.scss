@@ -29,7 +29,7 @@ body {
   }
 
   .results-table {
-    @include mixins.style-simple-breakpoints(margin, 0 var(--default-margin) 96px, 0 var(--small-margin) 96px)
+    @include mixins.style-simple-breakpoints(margin, 0 var(--default-margin) 96px, 0 var(--small-margin) 96px);
   }
 
   .car-table {

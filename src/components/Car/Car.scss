@@ -6,7 +6,7 @@
     max-width: 376px;
   }
   @include mixins.layout-bp(lg) {
-    width: 100%
+    width: 100%;
   }
 
   .amazing {
