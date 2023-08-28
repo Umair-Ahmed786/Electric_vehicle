@@ -7,6 +7,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import TableBody from '@mui/material/TableBody';
 import TableHead from '@mui/material/TableHead';
+import Tooltip from '@mui/material/Tooltip';
 
 function Results({ results, resultSelected }) {
   return (
@@ -24,8 +25,8 @@ function Results({ results, resultSelected }) {
           {results.map((result) => (
             <TableRow key={result.vehicle.name} onClick={() => resultSelected(result)}>
               <TableCell>{result.vehicle.name}</TableCell>
-              <TableCell align="right">{result.scoreGood.total}</TableCell>
-              <TableCell align="right">{result.scoreBad.total}</TableCell>
+              <TableCell align="right"><Tooltip title={JSON.stringify(result.scoreGood)}><span>{result.scoreGood.total}</span></Tooltip></TableCell>
+              <TableCell align="right"><Tooltip title={JSON.stringify(result.scoreBad)}><span>{result.scoreBad.total}</span></Tooltip></TableCell>
               <TableCell align="right">{result.score}</TableCell>
             </TableRow>
           ))}

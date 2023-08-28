@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import '../configurators.scss';
 import { TextField } from '@mui/material';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import RefreshRoundedIcon from '@mui/icons-material/RefreshRounded';
 
 function HybridConfigurator({ configurationChanged }) {
   const localStorageConfig = JSON.parse(localStorage.getItem('phev-config'));
@@ -129,6 +132,14 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
       </section>
+      <Tooltip title='Reset'>
+        <IconButton onClick={() => {
+          localStorage.removeItem('phev-config');
+          window.location.reload();
+        }}>
+          <RefreshRoundedIcon />
+        </IconButton>
+      </Tooltip>
     </form>
   );
 }

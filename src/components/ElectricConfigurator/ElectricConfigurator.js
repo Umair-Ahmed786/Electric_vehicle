@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import '../configurators.scss';
 import TextField from '@mui/material/TextField';
+import Tooltip from '@mui/material/Tooltip';
+import IconButton from '@mui/material/IconButton';
+import RefreshRoundedIcon from '@mui/icons-material/RefreshRounded';
 
 function ElectricConfigurator({ configurationChanged }) {
   const localStorageConfig = JSON.parse(localStorage.getItem('ev-config'));
@@ -8,12 +11,12 @@ function ElectricConfigurator({ configurationChanged }) {
   let consumption = localStorageConfig?.consumption ?? 2;
   let look = localStorageConfig?.look ?? 5;
   let practicality = localStorageConfig?.practicality ?? 4;
-  let price = localStorageConfig?.price ?? 2;
+  let price = localStorageConfig?.price ?? 3;
   let quality = localStorageConfig?.quality ?? 4;
   let range = localStorageConfig?.range ?? 5;
   let supercharge = localStorageConfig?.supercharge ?? 1;
   let trunk = localStorageConfig?.trunk ?? 5;
-  let volume = localStorageConfig?.volume ?? 1;
+  let volume = localStorageConfig?.volume ?? 3;
 
   const sendConfiguration = () =>
     configurationChanged({
@@ -129,6 +132,14 @@ function ElectricConfigurator({ configurationChanged }) {
           margin='dense'
         />
       </section>
+      <Tooltip title='Reset'>
+        <IconButton onClick={() => {
+          localStorage.removeItem('ev-config');
+          window.location.reload();
+        }}>
+          <RefreshRoundedIcon />
+        </IconButton>
+      </Tooltip>
     </form>
   );
 }
