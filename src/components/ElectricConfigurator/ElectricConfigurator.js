@@ -37,7 +37,7 @@ function ElectricConfigurator({ configurationChanged }) {
           label='Coefficient Coffre'
           value={trunk}
           onChange={(event) => {
-            setTrunk(+event.target.value);
+            setTrunk(event.target.value);
             sendConfiguration();
           }}
           type='number'
@@ -49,7 +49,7 @@ function ElectricConfigurator({ configurationChanged }) {
           label='Coefficient Autonomie'
           value={range}
           onChange={(event) => {
-            setRange(+event.target.value);
+            setRange(event.target.value);
             sendConfiguration();
           }}
           type='number'
@@ -61,7 +61,7 @@ function ElectricConfigurator({ configurationChanged }) {
           label='Coefficient Consommation'
           value={consumption}
           onChange={(event) => {
-            setConsumption(+event.target.value);
+            setConsumption(event.target.value);
             sendConfiguration();
           }}
           type='number'
@@ -73,7 +73,7 @@ function ElectricConfigurator({ configurationChanged }) {
           label='Coefficient Durée supercharge'
           value={supercharge}
           onChange={(event) => {
-            setSupercharge(+event.target.value);
+            setSupercharge(event.target.value);
             sendConfiguration();
           }}
           type='number'
@@ -85,7 +85,7 @@ function ElectricConfigurator({ configurationChanged }) {
           label='Coefficient Quality'
           value={quality}
           onChange={(event) => {
-            setQuality(+event.target.value);
+            setQuality(event.target.value);
             sendConfiguration();
           }}
           type='number'
@@ -97,7 +97,7 @@ function ElectricConfigurator({ configurationChanged }) {
           label='Coefficient Apparence'
           value={look}
           onChange={(event) => {
-            setLook(+event.target.value);
+            setLook(event.target.value);
             sendConfiguration();
           }}
           type='number'
@@ -109,7 +109,7 @@ function ElectricConfigurator({ configurationChanged }) {
           label='Coefficient Praticité'
           value={practicality}
           onChange={(event) => {
-            setPracticality(+event.target.value);
+            setPracticality(event.target.value);
             sendConfiguration();
           }}
           type='number'
@@ -124,7 +124,7 @@ function ElectricConfigurator({ configurationChanged }) {
           label='Coefficient Prix'
           value={price}
           onChange={(event) => {
-            setPrice(+event.target.value);
+            setPrice(event.target.value);
             sendConfiguration();
           }}
           type='number'
@@ -136,7 +136,7 @@ function ElectricConfigurator({ configurationChanged }) {
           label='Coefficient Volume'
           value={volume}
           onChange={(event) => {
-            setVolume(+event.target.value);
+            setVolume(event.target.value);
             sendConfiguration();
           }}
           type='number'
