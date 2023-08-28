@@ -7,11 +7,13 @@ function scoreForField(voiture, intervals, field) {
 }
 
 export function scorePHEVPositive(vehicle, config) {
+  const powerScore = scoreForField(vehicle, powerIntervals, 'power');
   const trunkScore = scoreForField(vehicle, trunkIntervals, 'trunk');
   const fuelTankScore = scoreForField(vehicle, fuelTankIntervals, 'tank');
   const fuelConsumptionScore = scoreForField(vehicle, fuelConsumptionIntervals, 'consumption');
   const superchargeScore = scoreForField(vehicle, hybridSuperchargeIntervals, 'supercharge');
 
+  const powerScoreWeighted = powerScore * config.power;
   const trunkScoreWeighted = trunkScore * config.trunk;
   const fuelTankScoreWeighted = fuelTankScore * config.tank;
   const consumptionScoreWeighted = fuelConsumptionScore * config.consumption;
@@ -22,6 +24,7 @@ export function scorePHEVPositive(vehicle, config) {
 
   return {
     total:
+      powerScoreWeighted +
       trunkScoreWeighted +
       fuelTankScoreWeighted +
       consumptionScoreWeighted +
@@ -29,6 +32,7 @@ export function scorePHEVPositive(vehicle, config) {
       qualityScoreWeighted +
       lookScoreWeighted +
       practicalityScoreWeighted,
+    power: powerScoreWeighted,
     trunk: trunkScoreWeighted,
     tank: fuelTankScoreWeighted,
     consumption: consumptionScoreWeighted,
@@ -40,13 +44,15 @@ export function scorePHEVPositive(vehicle, config) {
 }
 
 export function scorePositive(vehicle, config) {
-  const coffreScore = scoreForField(vehicle, trunkIntervals, 'trunk');
-  const autonomieScore = scoreForField(vehicle, electricRangeIntervals, 'range');
+  const powerScore = scoreForField(vehicle, powerIntervals, 'power');
+  const trunkScore = scoreForField(vehicle, trunkIntervals, 'trunk');
+  const rangeScore = scoreForField(vehicle, electricRangeIntervals, 'range');
   const consommationScore = scoreForField(vehicle, electricConsumptionIntervals, 'consumption');
   const superchargeScore = scoreForField(vehicle, electricSuperchargeIntervals, 'supercharge');
 
-  const trunkScoreWeighted = coffreScore * config.trunk;
-  const rangeScoreWeighted = autonomieScore * config.range;
+  const powerScoreWeighted = powerScore * config.power;
+  const trunkScoreWeighted = trunkScore * config.trunk;
+  const rangeScoreWeighted = rangeScore * config.range;
   const consumptionScoreWeighted = consommationScore * config.consumption;
   const superchargeScoreWeighted = superchargeScore * config.supercharge;
   const qualityScoreWeighted = vehicle.quality * config.quality;
@@ -55,6 +61,7 @@ export function scorePositive(vehicle, config) {
 
   return {
     total:
+      powerScoreWeighted +
       trunkScoreWeighted +
       rangeScoreWeighted +
       consumptionScoreWeighted +
@@ -62,6 +69,7 @@ export function scorePositive(vehicle, config) {
       qualityScoreWeighted +
       lookScoreWeighted +
       practicalityScoreWeighted,
+    power: powerScoreWeighted,
     trunk: trunkScoreWeighted,
     range: rangeScoreWeighted,
     consumption: consumptionScoreWeighted,
@@ -85,6 +93,14 @@ export function scoreNegative(voiture, config) {
   };
 }
 
+const powerIntervals = [
+  [10,1000],
+  [8,9.9],
+  [6,7.9],
+  [5,6.9],
+  [4.1,4.9],
+  [0,4],
+]
 const trunkIntervals = [
   [0, 420],
   [421, 474],

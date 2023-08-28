@@ -8,26 +8,28 @@ import RefreshRoundedIcon from '@mui/icons-material/RefreshRounded';
 function HybridConfigurator({ configurationChanged }) {
   const localStorageConfig = JSON.parse(localStorage.getItem('phev-config'));
 
+  let consumption = localStorageConfig?.consumption ?? 6;
+  let look = localStorageConfig?.look ?? 2;
+  let power = localStorageConfig?.power ?? 0;
+  let practicality = localStorageConfig?.practicality ?? 4;
+  let price = localStorageConfig?.price ?? 5;
+  let quality = localStorageConfig?.quality ?? 4;
+  let supercharge = localStorageConfig?.supercharge ?? 0.5;
   let trunk = localStorageConfig?.trunk ?? 2.5;
   let tank = localStorageConfig?.tank ?? 4;
-  let consumption = localStorageConfig?.consumption ?? 6;
-  let supercharge = localStorageConfig?.supercharge ?? 0.5;
-  let quality = localStorageConfig?.quality ?? 4;
-  let look = localStorageConfig?.look ?? 2;
-  let price = localStorageConfig?.price ?? 5;
   let volume = localStorageConfig?.volume ?? 1;
-  let practicality = localStorageConfig?.practicality ?? 4;
 
   const sendConfiguration = () =>
     configurationChanged({
+      consumption,
+      look,
+      power,
+      practicality,
+      price,
+      quality,
+      supercharge,
       trunk,
       tank,
-      consumption,
-      supercharge,
-      quality,
-      practicality,
-      look,
-      price,
       volume,
     });
 
@@ -103,6 +105,16 @@ function HybridConfigurator({ configurationChanged }) {
           name='practicality'
           defaultValue={practicality}
           onChange={(event) => practicality = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
+          inputProps={{ step: 0.5 }}
+          margin='dense'
+        />
+        <TextField
+          label='Coefficient Puissance'
+          name='power'
+          defaultValue={power}
+          onChange={(event) => power = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}

@@ -10,6 +10,7 @@ function ElectricConfigurator({ configurationChanged }) {
 
   let consumption = localStorageConfig?.consumption ?? 2;
   let look = localStorageConfig?.look ?? 5;
+  let power = localStorageConfig?.power ?? 0;
   let practicality = localStorageConfig?.practicality ?? 4;
   let price = localStorageConfig?.price ?? 3;
   let quality = localStorageConfig?.quality ?? 4;
@@ -20,15 +21,16 @@ function ElectricConfigurator({ configurationChanged }) {
 
   const sendConfiguration = () =>
     configurationChanged({
-      trunk,
-      range,
       consumption,
-      supercharge,
-      quality,
-      practicality,
       look,
+      power,
+      practicality,
       price,
-      volume,
+      quality,
+      range,
+      supercharge,
+      trunk,
+      volume
     });
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -103,6 +105,16 @@ function ElectricConfigurator({ configurationChanged }) {
           name='practicality'
           defaultValue={practicality}
           onChange={(event) => practicality = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
+          inputProps={{ step: 0.5 }}
+          margin='dense'
+        />
+        <TextField
+          label='Coefficient Puissance'
+          name='power'
+          defaultValue={power}
+          onChange={(event) => power = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
