@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../configurators.scss';
 import TextField from '@mui/material/TextField';
 
 function ElectricConfigurator({ configurationChanged }) {
-  const [trunk, setTrunk] = useState(2.5);
-  const [range, setRange] = useState(5);
-  const [consumption, setConsumption] = useState(2);
-  const [supercharge, setSupercharge] = useState(1);
-  const [quality, setQuality] = useState(4);
-  const [look, setLook] = useState(1.5);
-  const [price, setPrice] = useState(2);
-  const [volume, setVolume] = useState(1);
-  const [practicality, setPracticality] = useState(4);
+  const localStorageConfig = JSON.parse(localStorage.getItem('ev-config'));
+
+  let consumption = localStorageConfig?.consumption ?? 2;
+  let look = localStorageConfig?.look ?? 5;
+  let practicality = localStorageConfig?.practicality ?? 4;
+  let price = localStorageConfig?.price ?? 2;
+  let quality = localStorageConfig?.quality ?? 4;
+  let range = localStorageConfig?.range ?? 5;
+  let supercharge = localStorageConfig?.supercharge ?? 1;
+  let trunk = localStorageConfig?.trunk ?? 5;
+  let volume = localStorageConfig?.volume ?? 1;
 
   const sendConfiguration = () =>
     configurationChanged({
@@ -30,16 +32,14 @@ function ElectricConfigurator({ configurationChanged }) {
   useEffect(sendConfiguration, []);
 
   return (
-    <div className='configurator'>
+    <form onChange={sendConfiguration} className='configurator'>
       <section className='goods'>
         <h4>Avantages</h4>
         <TextField
           label='Coefficient Coffre'
-          value={trunk}
-          onChange={(event) => {
-            setTrunk(event.target.value);
-            sendConfiguration();
-          }}
+          name='trunk'
+          defaultValue={trunk}
+          onChange={(event) => trunk = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
@@ -47,23 +47,19 @@ function ElectricConfigurator({ configurationChanged }) {
         />
         <TextField
           label='Coefficient Autonomie'
-          value={range}
-          onChange={(event) => {
-            setRange(event.target.value);
-            sendConfiguration();
-          }}
+          name='range'
+          defaultValue={range}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
           margin='dense'
+          onChange={(event) => range = event.target.value ? +event.target.value : null}
         />
         <TextField
           label='Coefficient Consommation'
-          value={consumption}
-          onChange={(event) => {
-            setConsumption(event.target.value);
-            sendConfiguration();
-          }}
+          name='consumption'
+          defaultValue={consumption}
+          onChange={(event) => consumption = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
@@ -71,11 +67,9 @@ function ElectricConfigurator({ configurationChanged }) {
         />
         <TextField
           label='Coefficient Durée supercharge'
-          value={supercharge}
-          onChange={(event) => {
-            setSupercharge(event.target.value);
-            sendConfiguration();
-          }}
+          name='supercharge'
+          defaultValue={supercharge}
+          onChange={(event) => supercharge = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
@@ -83,11 +77,9 @@ function ElectricConfigurator({ configurationChanged }) {
         />
         <TextField
           label='Coefficient Quality'
-          value={quality}
-          onChange={(event) => {
-            setQuality(event.target.value);
-            sendConfiguration();
-          }}
+          name='quality'
+          defaultValue={quality}
+          onChange={(event) => quality = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
@@ -95,11 +87,9 @@ function ElectricConfigurator({ configurationChanged }) {
         />
         <TextField
           label='Coefficient Apparence'
-          value={look}
-          onChange={(event) => {
-            setLook(event.target.value);
-            sendConfiguration();
-          }}
+          name='look'
+          defaultValue={look}
+          onChange={(event) => look = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
@@ -107,11 +97,9 @@ function ElectricConfigurator({ configurationChanged }) {
         />
         <TextField
           label='Coefficient Praticité'
-          value={practicality}
-          onChange={(event) => {
-            setPracticality(event.target.value);
-            sendConfiguration();
-          }}
+          name='practicality'
+          defaultValue={practicality}
+          onChange={(event) => practicality = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
@@ -122,11 +110,9 @@ function ElectricConfigurator({ configurationChanged }) {
         <h4>Inconvénients</h4>
         <TextField
           label='Coefficient Prix'
-          value={price}
-          onChange={(event) => {
-            setPrice(event.target.value);
-            sendConfiguration();
-          }}
+          name='price'
+          defaultValue={price}
+          onChange={(event) => price = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
@@ -134,18 +120,16 @@ function ElectricConfigurator({ configurationChanged }) {
         />
         <TextField
           label='Coefficient Volume'
-          value={volume}
-          onChange={(event) => {
-            setVolume(event.target.value);
-            sendConfiguration();
-          }}
+          name='volume'
+          defaultValue={volume}
+          onChange={(event) => volume = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
           margin='dense'
         />
       </section>
-    </div>
+    </form>
   );
 }
 

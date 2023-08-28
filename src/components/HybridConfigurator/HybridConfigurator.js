@@ -1,17 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import '../configurators.scss';
 import { TextField } from '@mui/material';
 
 function HybridConfigurator({ configurationChanged }) {
-  const [trunk, setTrunk] = useState(2.5);
-  const [tank, setTank] = useState(4);
-  const [consumption, setConsumption] = useState(6);
-  const [supercharge, setSupercharge] = useState(0.5);
-  const [quality, setQuality] = useState(4);
-  const [look, setLook] = useState(2);
-  const [price, setPrice] = useState(5);
-  const [volume, setVolume] = useState(1);
-  const [practicality, setPracticality] = useState(4);
+  const localStorageConfig = JSON.parse(localStorage.getItem('phev-config'));
+
+  let trunk = localStorageConfig?.trunk ?? 2.5;
+  let tank = localStorageConfig?.tank ?? 4;
+  let consumption = localStorageConfig?.consumption ?? 6;
+  let supercharge = localStorageConfig?.supercharge ?? 0.5;
+  let quality = localStorageConfig?.quality ?? 4;
+  let look = localStorageConfig?.look ?? 2;
+  let price = localStorageConfig?.price ?? 5;
+  let volume = localStorageConfig?.volume ?? 1;
+  let practicality = localStorageConfig?.practicality ?? 4;
 
   const sendConfiguration = () =>
     configurationChanged({
@@ -30,122 +32,104 @@ function HybridConfigurator({ configurationChanged }) {
   useEffect(sendConfiguration, []);
 
   return (
-    <div className="configurator">
-      <section className="goods">
+    <form onChange={sendConfiguration} className='configurator'>
+      <section className='goods'>
         <h4>Avantages</h4>
         <TextField
-          label="Coefficient Coffre"
-          value={trunk}
-          onChange={(event) => {
-            setTrunk(event.target.value);
-            sendConfiguration();
-          }}
-          type="number"
-          size="small"
+          label='Coefficient Coffre'
+          name='trunk'
+          defaultValue={trunk}
+          onChange={(event) => trunk = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
           inputProps={{ step: 0.5 }}
-          margin="dense"
+          margin='dense'
         />
         <TextField
-          label="Coefficient Réservoir"
-          value={tank}
-          onChange={(event) => {
-            setTank(event.target.value);
-            sendConfiguration();
-          }}
-          type="number"
-          size="small"
+          label='Coefficient Réservoir'
+          name='tank'
+          defaultValue={tank}
+          onChange={(event) => tank = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
           inputProps={{ step: 0.5 }}
-          margin="dense"
+          margin='dense'
         />
         <TextField
-          label="Coefficient Consommation"
-          value={consumption}
-          onChange={(event) => {
-            setConsumption(event.target.value);
-            sendConfiguration();
-          }}
-          type="number"
-          size="small"
+          label='Coefficient Consommation'
+          name='consumption'
+          defaultValue={consumption}
+          onChange={(event) => consumption = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
           inputProps={{ step: 0.5 }}
-          margin="dense"
+          margin='dense'
         />
         <TextField
           label="Coefficient Durée 'super'charge"
-          value={supercharge}
-          onChange={(event) => {
-            setSupercharge(event.target.value);
-            sendConfiguration();
-          }}
-          type="number"
-          size="small"
+          name='supercharge'
+          defaultValue={supercharge}
+          onChange={(event) => supercharge = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
           inputProps={{ step: 0.5 }}
-          margin="dense"
+          margin='dense'
         />
         <TextField
-          label="Coefficient Quality"
-          value={quality}
-          onChange={(event) => {
-            setQuality(event.target.value);
-            sendConfiguration();
-          }}
-          type="number"
-          size="small"
+          label='Coefficient Quality'
+          name='quality'
+          defaultValue={quality}
+          onChange={(event) => quality = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
           inputProps={{ step: 0.5 }}
-          margin="dense"
+          margin='dense'
         />
         <TextField
-          label="Coefficient Apparence"
-          value={look}
-          onChange={(event) => {
-            setLook(event.target.value);
-            sendConfiguration();
-          }}
-          type="number"
-          size="small"
+          label='Coefficient Apparence'
+          name='look'
+          defaultValue={look}
+          onChange={(event) => look = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
           inputProps={{ step: 0.5 }}
-          margin="dense"
+          margin='dense'
         />
         <TextField
-          label="Coefficient Praticité"
-          value={practicality}
-          onChange={(event) => {
-            setPracticality(event.target.value);
-            sendConfiguration();
-          }}
-          type="number"
-          size="small"
+          label='Coefficient Praticité'
+          name='practicality'
+          defaultValue={practicality}
+          onChange={(event) => practicality = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
           inputProps={{ step: 0.5 }}
-          margin="dense"
+          margin='dense'
         />
       </section>
-      <section className="bads">
+      <section className='bads'>
         <h4>Inconvénients</h4>
         <TextField
-          label="Coefficient Prix"
-          value={price}
-          onChange={(event) => {
-            setPrice(event.target.value);
-            sendConfiguration();
-          }}
-          type="number"
-          size="small"
+          label='Coefficient Prix'
+          name='price'
+          defaultValue={price}
+          onChange={(event) => price = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
           inputProps={{ step: 0.5 }}
-          margin="dense"
+          margin='dense'
         />
         <TextField
-          label="Coefficient Volume"
-          value={volume}
-          onChange={(event) => {
-            setVolume(event.target.value);
-            sendConfiguration();
-          }}
-          type="number"
-          size="small"
+          label='Coefficient Volume'
+          name='volume'
+          defaultValue={volume}
+          onChange={(event) => volume = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
           inputProps={{ step: 0.5 }}
-          margin="dense"
+          margin='dense'
         />
       </section>
-    </div>
+    </form>
   );
 }
 

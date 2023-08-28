@@ -20,8 +20,10 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 function App() {
   const computeResults = (config, datasetName) => {
+    console.warn(datasetName, config)
     const res = [];
     if (datasetName === 'EV') {
+      localStorage.setItem('ev-config', JSON.stringify(config));
       electricVehicles.forEach((vehicle) => {
         const scoreGood = scorePositive(vehicle, config);
         const scoreBad = scoreNegative(vehicle, config);
@@ -29,6 +31,7 @@ function App() {
         res.push({ vehicle, score, scoreGood, scoreBad });
       });
     } else if (datasetName === 'PHEV') {
+      localStorage.setItem('phev-config', JSON.stringify(config));
       hybridVehicles.forEach((vehicle) => {
         const scoreGood = scorePHEVPositive(vehicle, config);
         const scoreBad = scoreNegative(vehicle, config);
