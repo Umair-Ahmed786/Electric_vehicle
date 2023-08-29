@@ -21,7 +21,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 function App() {
   const computeResults = (config, datasetName) => {
-    console.warn(datasetName, config)
+    console.info(datasetName, config)
     const res = [];
     if (datasetName === 'EV') {
       localStorage.setItem('ev-config', JSON.stringify(config));
@@ -50,7 +50,8 @@ function App() {
   const [dialogOpen, setDialogOpen] = React.useState(false);
   const [results, setResults] = useState([]);
   const [result, setResult] = useState(null);
-  const [tabValue, setTabValue] = useState(0);
+  const urlSearchParams = (new URLSearchParams(window.location.search));
+  const [tabValue, setTabValue] = useState(+localStorage.getItem('type') ?? +urlSearchParams.get('type') ?? 0);
   const matchesGtLG = useMediaQuery('(min-width:1280px)');
   const matchesGtMD = useMediaQuery('(min-width:960px)');
 
@@ -58,6 +59,10 @@ function App() {
   const handleTabChange = (event, newTabValue) => {
     setResult(null);
     setTabValue(newTabValue);
+    urlSearchParams.set('type', newTabValue)
+    window.location.search = urlSearchParams.toString();
+    localStorage.setItem('type', newTabValue)
+
     setTimeout(() => {
       setDrawerOpen(true);
       setTimeout(() => setDrawerOpen(false));
