@@ -78,5 +78,19 @@
     "imgDashboard": "https://image-annonce.lacentrale.fr/1096x829/E111091025_STANDARD_6.jpg?version=1681223424",
     "imgBackseats": "https://image-annonce.lacentrale.fr/1096x829/E111142882_STANDARD_5.jpg?version=1664523702",
     "imgTrunk": "https://image-annonce.lacentrale.fr/1096x829/E112385423_STANDARD_6.jpg?version=1687348894"
+  },
+  {
+    "code": "lexus-rz",
+    "consumption": 20.8,
+    "look": 3.5,
+    "name": "Lexus RZ",
+    "power": 5.6,
+    "practicality": 2.5,
+    "price": 75500,
+    "quality": 5,
+    "range": 416,
+    "supercharge": 21,
+    "trunk": 522,
+    "volume": 14.99
   }
 ]
