@@ -91,6 +91,12 @@
     "range": 416,
     "supercharge": 21,
     "trunk": 522,
-    "volume": 14.99
+    "volume": 14.99,
+    "imgFront": "",
+    "imgBack": "",
+    "imgSide": "",
+    "imgDashboard": "",
+    "imgBackseats": "",
+    "imgTrunk": ""
   }
 ]
