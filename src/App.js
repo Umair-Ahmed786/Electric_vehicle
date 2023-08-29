@@ -12,6 +12,7 @@ import Results from './components/Results/Results';
 import Car from './components/Car/Car';
 import CarCarousel from './components/Car/CarCarousel';
 import electricVehicles from './datasets/electric-vehicles.json';
+import notSelectedElectricVehicles from './datasets/not-selected-electric-vehicles.json';
 import hybridVehicles from './datasets/hybrid-vehicles.json';
 import { scoreNegative, scorePHEVPositive, scorePositive, sortByScore } from './compute-vehicles';
 import { Tab, Tabs } from '@mui/material';
@@ -24,7 +25,7 @@ function App() {
     const res = [];
     if (datasetName === 'EV') {
       localStorage.setItem('ev-config', JSON.stringify(config));
-      electricVehicles.forEach((vehicle) => {
+      [...electricVehicles,...notSelectedElectricVehicles].forEach((vehicle) => {
         const scoreGood = scorePositive(vehicle, config);
         const scoreBad = scoreNegative(vehicle, config);
         const score = Math.round((scoreGood.total + scoreBad.total) * 10) / 10;
