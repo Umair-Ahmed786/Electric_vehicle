@@ -58,6 +58,9 @@ body {
       .car-table {
         padding: 0 var(--small-margin);
         width: calc(100% - #{var(--small-margin)} * 2);
+        border-radius: 0;
+        margin-bottom: var(--small-margin);
+        box-shadow: none;
       }
     }
   }

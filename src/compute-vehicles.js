@@ -107,12 +107,12 @@ export function scoreNegative(voiture, config) {
 }
 
 const powerIntervals = [
-  [10, 1000],
+  [11, 1000],
+  [10, 10.9],
   [8, 9.9],
   [6, 7.9],
-  [5, 6.9],
-  [4.1, 4.9],
-  [0, 4],
+  [5, 5.9],
+  [0, 4.9],
 ];
 const trunkIntervals = [
   [0, 420],

@@ -51,8 +51,8 @@ function Car({ result, type }) {
 
   if (result) {
     return (
-      <TableContainer component={Paper} className='car-table'>
-        <Table>
+      <TableContainer component={Paper}  className='car-table'>
+        <Table size="small">
           <TableBody>
             <TableRow>
               <TableCell>Nom</TableCell>

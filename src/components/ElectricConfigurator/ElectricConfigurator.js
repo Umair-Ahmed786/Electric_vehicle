@@ -16,7 +16,7 @@ function ElectricConfigurator({ configurationChanged }) {
   let quality = localStorageConfig?.quality ?? 4;
   let range = localStorageConfig?.range ?? 5;
   let supercharge = localStorageConfig?.supercharge ?? 1;
-  let trunk = localStorageConfig?.trunk ?? 5;
+  let trunk = localStorageConfig?.trunk ?? 3;
   let volume = localStorageConfig?.volume ?? 3;
 
   const sendConfiguration = () =>
