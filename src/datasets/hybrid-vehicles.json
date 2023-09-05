@@ -11,13 +11,7 @@
     "tank": 47,
     "supercharge": 89,
     "trunk": 500,
-    "volume": 13.63,
-    "imgFront": "",
-    "imgBack": "",
-    "imgSide": "",
-    "imgDashboard": "",
-    "imgBackseats": "",
-    "imgTrunk": ""
+    "volume": 13.63
   },
   {
     "code": "ds-7-etense",
@@ -31,13 +25,7 @@
     "tank": 43,
     "supercharge": 67,
     "trunk": 555,
-    "volume": 14.2,
-    "imgFront": "",
-    "imgBack": "",
-    "imgSide": "",
-    "imgDashboard": "",
-    "imgBackseats": "",
-    "imgTrunk": ""
+    "volume": 14.2
   },
   {
     "code": "hyundai-tucson",

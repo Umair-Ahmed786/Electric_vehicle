@@ -66,7 +66,7 @@ function Car({ result, type }) {
               <TableCell>Coffre</TableCell>
               <TableCell>{result.vehicle.trunk} L</TableCell>
             </TableRow>
-            <TableRow className={classGood(result.scoreGood.rangeScore)}>
+            <TableRow className={classGood(isEV ? result.scoreGood.rangeScore : result.scoreGood.tankScore)}>
               <TableCell>{isEV ? 'Autonomie moy.' : 'Réservoir'}</TableCell>
               <TableCell>{isEV ? `${result.vehicle.range} km` : `${result.vehicle.tank} L`}</TableCell>
             </TableRow>
