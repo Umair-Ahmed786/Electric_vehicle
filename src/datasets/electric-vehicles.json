@@ -11,7 +11,8 @@
     "range": 494,
     "supercharge": 22,
     "trunk": 520,
-    "volume": 13.99
+    "volume": 13.99,
+    "surface": 8.58
   },
   {
     "code": "audi-q4-sportback",
@@ -25,7 +26,8 @@
     "range": 494,
     "supercharge": 22,
     "trunk": 535,
-    "volume": 13.82
+    "volume": 13.82,
+    "surface": 8.58
   },
   {
     "code": "bmw-ix1",
@@ -39,7 +41,8 @@
     "range": 420,
     "supercharge": 23,
     "trunk": 490,
-    "volume": 13.49
+    "volume": 13.49,
+    "surface": 8.33
   },
   {
     "code": "ford-mustang-mach-e-premium",
@@ -53,7 +56,8 @@
     "range": 583,
     "supercharge": 26,
     "trunk": 502,
-    "volume": 13.64
+    "volume": 13.64,
+    "surface": 8.80
   },
   {
     "code": "hyundai-ioniq-5",
@@ -67,7 +71,8 @@
     "range": 518,
     "supercharge": 20,
     "trunk": 584,
-    "volume": 14.12
+    "volume": 14.12,
+    "surface": 8.77
   },
   {
     "code": "kia-ev6",
@@ -81,7 +86,8 @@
     "range": 532,
     "supercharge": 21,
     "trunk": 572,
-    "volume": 13.64
+    "volume": 13.64,
+    "surface": 8.80
   },
   {
     "code": "mercedes-eqb-250",
@@ -95,7 +101,8 @@
     "range": 478,
     "supercharge": 30,
     "trunk": 520,
-    "volume": 14.3
+    "volume": 14.3,
+    "surface": 8.56
   },
   {
     "code": "skoda-enyaq",
@@ -109,7 +116,8 @@
     "range": 520,
     "supercharge": 27,
     "trunk": 585,
-    "volume": 14.16
+    "volume": 14.16,
+    "surface": 8.74
   },
   {
     "code": "tesla-model-3",
@@ -123,7 +131,8 @@
     "range": 600,
     "supercharge": 21,
     "trunk": 542,
-    "volume": 12.49
+    "volume": 12.49,
+    "surface": 8.68
   },
   {
     "code": "tesla-model-y",
@@ -137,7 +146,8 @@
     "range": 510,
     "supercharge": 21,
     "trunk": 971,
-    "volume": 14.77
+    "volume": 14.77,
+    "surface": 9.12
   },
   {
     "code": "volkswagen-id4",
@@ -151,7 +161,8 @@
     "range": 489,
     "supercharge": 27,
     "trunk": 543,
-    "volume": 13.9
+    "volume": 13.9,
+    "surface": 8.47
   },
   {
     "code": "volkswagen-id5",
@@ -165,7 +176,8 @@
     "range": 490,
     "supercharge": 27,
     "trunk": 549,
-    "volume": 13.7
+    "volume": 13.7,
+    "surface": 8.51
   },
   {
     "code": "volvo-xc40-recharge",
@@ -179,6 +191,7 @@
     "range": 574,
     "supercharge": 23,
     "trunk": 452,
-    "volume": 13.89
+    "volume": 13.89,
+    "surface": 8.42
   }
 ]
