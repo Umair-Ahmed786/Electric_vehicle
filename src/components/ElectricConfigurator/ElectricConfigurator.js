@@ -18,6 +18,7 @@ function ElectricConfigurator({ configurationChanged }) {
   let supercharge = localStorageConfig?.supercharge ?? 1;
   let trunk = localStorageConfig?.trunk ?? 3;
   let volume = localStorageConfig?.volume ?? 3;
+  let surface = localStorageConfig?.volume ?? 5;
 
   const sendConfiguration = () =>
     configurationChanged({
@@ -30,7 +31,8 @@ function ElectricConfigurator({ configurationChanged }) {
       range,
       supercharge,
       trunk,
-      volume
+      volume,
+      surface
     });
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -138,6 +140,16 @@ function ElectricConfigurator({ configurationChanged }) {
           name='volume'
           defaultValue={volume}
           onChange={(event) => volume = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
+          inputProps={{ step: 0.5 }}
+          margin='dense'
+        />
+        <TextField
+          label='Coefficient Surface'
+          name='surface'
+          defaultValue={surface}
+          onChange={(event) => surface = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}

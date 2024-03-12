@@ -21,7 +21,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 function App() {
   const computeResults = (config, datasetName) => {
-    console.info(datasetName, config)
     const res = [];
     if (datasetName === 'EV') {
       localStorage.setItem('ev-config', JSON.stringify(config));
@@ -42,7 +41,7 @@ function App() {
     }
 
     res.sort(sortByScore);
-
+    
     setResults(res);
   };
 

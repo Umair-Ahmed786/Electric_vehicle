@@ -93,16 +93,20 @@ export function scorePositive(vehicle, config) {
 export function scoreNegative(voiture, config) {
   const priceScore = scoreForField(voiture, priceIntervals, 'price');
   const volumeScore = scoreForField(voiture, volumeIntervals, 'volume');
+  const surfaceScore = scoreForField(voiture, surfaceIntervals, 'surface');
 
   const priceScoreWeighted = priceScore * config.price;
   const volumeScoreWeighted = volumeScore * config.volume;
+  const surfaceScoreWeighted = surfaceScore * config.surface;
 
   return {
-    total: -(priceScoreWeighted + volumeScoreWeighted),
+    total: -(priceScoreWeighted + volumeScoreWeighted + surfaceScoreWeighted),
     price: -priceScoreWeighted,
     priceScore,
     volume: -volumeScoreWeighted,
     volumeScore,
+    surface: -surfaceScoreWeighted,
+    surfaceScore,
   };
 }
 
@@ -178,6 +182,14 @@ const volumeIntervals = [
   [13.6, 14.09],
   [14.1, 14.69],
   [14.7, 10000],
+];
+const surfaceIntervals = [
+[0, 8.35],
+[8.36, 8.45],
+[8.46, 8.55],
+[8.56, 8.75],
+[8.76, 8.89],
+[8.9, 10000],
 ];
 const priceIntervals = [
   [0, 47999],

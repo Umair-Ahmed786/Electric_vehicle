@@ -18,6 +18,7 @@ function HybridConfigurator({ configurationChanged }) {
   let trunk = localStorageConfig?.trunk ?? 2.5;
   let tank = localStorageConfig?.tank ?? 4;
   let volume = localStorageConfig?.volume ?? 1;
+  let surface = localStorageConfig?.surface ?? 10;
 
   const sendConfiguration = () =>
     configurationChanged({
@@ -31,6 +32,7 @@ function HybridConfigurator({ configurationChanged }) {
       trunk,
       tank,
       volume,
+      surface
     });
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -138,6 +140,16 @@ function HybridConfigurator({ configurationChanged }) {
           name='volume'
           defaultValue={volume}
           onChange={(event) => volume = event.target.value ? +event.target.value : null}
+          type='number'
+          size='small'
+          inputProps={{ step: 0.5 }}
+          margin='dense'
+        />
+        <TextField
+          label='Coefficient Surface'
+          name='surface'
+          defaultValue={surface}
+          onChange={(event) => surface = event.target.value ? +event.target.value : null}
           type='number'
           size='small'
           inputProps={{ step: 0.5 }}
