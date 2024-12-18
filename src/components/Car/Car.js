@@ -51,33 +51,33 @@ function Car({ result, type }) {
 
   if (result) {
     return (
-      <TableContainer component={Paper}  className='car-table'>
+      <TableContainer component={Paper}  className='car-table' style={{opacity: '10rem'}}>
         <Table size="small">
           <TableBody>
             <TableRow>
-              <TableCell>Nom</TableCell>
+              <TableCell>Name</TableCell>
               <TableCell>{result.vehicle.name}</TableCell>
             </TableRow>
             <TableRow className={classBad(result.scoreBad.priceScore)}>
-              <TableCell sx={{ fontWeight: 'bold' }}>Prix</TableCell>
+              <TableCell sx={{ fontWeight: 'bold' }}>Price</TableCell>
               <TableCell sx={{ fontWeight: 'bold' }}>{result.vehicle.price.toLocaleString()} €</TableCell>
             </TableRow>
             <TableRow className={classGood(result.scoreGood.trunkScore)}>
-              <TableCell>Coffre</TableCell>
+              <TableCell>Trunk Capacity</TableCell>
               <TableCell>{result.vehicle.trunk} L</TableCell>
             </TableRow>
             <TableRow className={classGood(isEV ? result.scoreGood.rangeScore : result.scoreGood.tankScore)}>
-              <TableCell>{isEV ? 'Autonomie moy.' : 'Réservoir'}</TableCell>
+              <TableCell>{isEV ? 'Average autonomy.' : 'Fuel Tank'}</TableCell>
               <TableCell>{isEV ? `${result.vehicle.range} km` : `${result.vehicle.tank} L`}</TableCell>
             </TableRow>
             <TableRow className={classGood(result.scoreGood.consumptionScore)}>
-              <TableCell>Consommation</TableCell>
+              <TableCell>Fuel Consumption</TableCell>
               <TableCell>
                 {result.vehicle.consumption} {isEV ? 'kWh/100km' : 'L/100km'}
               </TableCell>
             </TableRow>
             <TableRow className={classGood(result.scoreGood.superchargeScore)}>
-              <TableCell>Supercharge</TableCell>
+              <TableCell>Supercharge Time</TableCell>
               <TableCell>{result.vehicle.supercharge} min</TableCell>
             </TableRow>
             <TableRow className={classBad(result.scoreBad.volumeScore)}>
@@ -85,19 +85,19 @@ function Car({ result, type }) {
               <TableCell>{result.vehicle.volume} m³</TableCell>
             </TableRow>
             <TableRow className={classGood(result.scoreGood.powerScore)}>
-              <TableCell>Puissance (0→100)</TableCell>
+              <TableCell>Power (0→100 km/h)</TableCell>
               <TableCell>{result.vehicle.power} s</TableCell>
             </TableRow>
             <TableRow className={classMark(result.vehicle.quality)}>
-              <TableCell>Qualité</TableCell>
+              <TableCell>Quality</TableCell>
               <TableCell>{result.vehicle.quality} /5</TableCell>
             </TableRow>
             <TableRow className={classMark(result.vehicle.practicality)}>
-              <TableCell>Praticité</TableCell>
+              <TableCell>Practicality</TableCell>
               <TableCell>{result.vehicle.practicality} /5</TableCell>
             </TableRow>
             <TableRow className={classMark(result.vehicle.look)}>
-              <TableCell>Esthétique</TableCell>
+              <TableCell>Aesthetics</TableCell>
               <TableCell>{result.vehicle.look} /5</TableCell>
             </TableRow>
           </TableBody>

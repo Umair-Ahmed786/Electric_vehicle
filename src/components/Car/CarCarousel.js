@@ -9,32 +9,52 @@ function CarCarousel({ vehicle }) {
     return (
       <Carousel statusFormatter={(currentItem, total) => `${currentItem} sur ${total}`} className='car-carousel'>
         <div>
-          <img src={vehicle.imgFront ?? require(`../../datasets/img/${vehicle.code}_front.${imgExtension}`)} alt='Avant' />
-          <p className='legend'>Avant</p>
+          <img 
+            src={vehicle.imgFront || (() => { try { return require(`../../datasets/img/${vehicle.code}_front.${imgExtension}`); } catch { return ''; } })()} 
+            alt='Front' 
+          />
+          <p className='legend'>Front</p>
         </div>
         <div>
-          <img src={vehicle.imgBack ?? require(`../../datasets/img/${vehicle.code}_back.${imgExtension}`)} alt='Arrière' />
-          <p className='legend'>Arrière</p>
+          <img 
+            src={vehicle.imgBack || (() => { try { return require(`../../datasets/img/${vehicle.code}_back.${imgExtension}`); } catch { return ''; } })()} 
+            alt='Back' 
+          />
+          <p className='legend'>Back</p>
         </div>
         <div>
-          <img src={vehicle.imgSide ?? require(`../../datasets/img/${vehicle.code}_side.${imgExtension}`)} alt='Côté' />
-          <p className='legend'>Côté</p>
+          <img 
+            src={vehicle.imgSide || (() => { try { return require(`../../datasets/img/${vehicle.code}_side.${imgExtension}`); } catch { return ''; } })()} 
+            alt='Side' 
+          />
+          <p className='legend'>Side</p>
         </div>
         <div>
-          <img src={vehicle.imgDashboard ?? require(`../../datasets/img/${vehicle.code}_dashboard.${imgExtension}`)} alt='Tableau de bord' />
-          <p className='legend'>Tableau de bord</p>
+          <img 
+            src={vehicle.imgDashboard || (() => { try { return require(`../../datasets/img/${vehicle.code}_dashboard.${imgExtension}`); } catch { return ''; } })()} 
+            alt='Dashboard' 
+          />
+          <p className='legend'>Dashboard</p>
         </div>
         <div>
-          <img src={vehicle.imgBackseats ?? require(`../../datasets/img/${vehicle.code}_backseats.${imgExtension}`)} alt='Banquette arrière' />
-          <p className='legend'>Banquette arrière</p>
+          <img 
+            src={vehicle.imgBackseats || (() => { try { return require(`../../datasets/img/${vehicle.code}_backseats.${imgExtension}`); } catch { return ''; } })()} 
+            alt='Back seat' 
+          />
+          <p className='legend'>Back seat</p>
         </div>
         <div>
-          <img src={vehicle.imgTrunk ?? require(`../../datasets/img/${vehicle.code}_trunk.${imgExtension}`)} alt='Coffre' />
-          <p className='legend'>Coffre</p>
+          <img 
+            src={vehicle.imgTrunk || (() => { try { return require(`../../datasets/img/${vehicle.code}_trunk.${imgExtension}`); } catch { return ''; } })()} 
+            alt='Trunk' 
+          />
+          <p className='legend'>Trunk</p>
         </div>
       </Carousel>
     );
   }
+
+  return null;
 }
 
 export default CarCarousel;

@@ -2,6 +2,7 @@ import Drawer from '@mui/material/Drawer';
 import Fab from '@mui/material/Fab';
 import IconButton from '@mui/material/IconButton';
 import Dialog from '@mui/material/Dialog';
+import bg from './datasets/img/bg.jpg'
 import DialogTitle from '@mui/material/DialogTitle';
 import BuildRoundedIcon from '@mui/icons-material/BuildRounded';
 import CancelRounded from '@mui/icons-material/CancelRounded';
@@ -54,15 +55,16 @@ function App() {
   );
 
   return (
-    <div className="App">
+    <div className="App" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', color: 'white' }}>
       <header className="App-header">
-        <h1>Quelle voiture ? <span className="version">{require('../package.json').version}</span>
+        <h1>Future Electric Vehicles  <span className="version">{require('../package.json').version}</span>
         </h1>
       </header>
       <Tabs value={tabValue} onChange={handleTabChange} centered>
-        <Tab label="Electrique" />
-        <Tab label="Hybride rechargeable (PHEV)" />
+        <Tab label="Electric"  style={{color: "white"}}/>
+        <Tab label="Plug-in Hybrid (PHEV)" style={{color: "white"}}/>
       </Tabs>
+
 
       {tabValue === 0 && (
         <section className="App-content">
@@ -99,7 +101,7 @@ function App() {
 
       <Fragment key="configurator-drawer">
         <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}
-                className="configurator-drawer">
+          className="configurator-drawer">
           {tabValue === 0 && (
             <ElectricConfigurator configurationChanged={(config) => configurationChanged(config, 'EV')} />
           )}

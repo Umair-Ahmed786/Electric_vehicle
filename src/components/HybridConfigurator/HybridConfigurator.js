@@ -41,9 +41,9 @@ function HybridConfigurator({ configurationChanged }) {
   return (
     <form onChange={sendConfiguration} className='configurator'>
       <section className='goods'>
-        <h4>Avantages</h4>
+        <h4>Advantages</h4>
         <TextField
-          label='Coefficient Coffre'
+          label='Trunk Coefficient'
           name='trunk'
           defaultValue={trunk}
           onChange={(event) => trunk = event.target.value ? +event.target.value : null}
@@ -53,7 +53,7 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
         <TextField
-          label='Coefficient Réservoir'
+          label='Tank Coefficient'
           name='tank'
           defaultValue={tank}
           onChange={(event) => tank = event.target.value ? +event.target.value : null}
@@ -63,7 +63,7 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
         <TextField
-          label='Coefficient Consommation'
+          label='Consumption Coefficient'
           name='consumption'
           defaultValue={consumption}
           onChange={(event) => consumption = event.target.value ? +event.target.value : null}
@@ -73,7 +73,7 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
         <TextField
-          label="Coefficient Durée 'super'charge"
+          label="Supercharge Duration Coefficient"
           name='supercharge'
           defaultValue={supercharge}
           onChange={(event) => supercharge = event.target.value ? +event.target.value : null}
@@ -83,7 +83,7 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
         <TextField
-          label='Coefficient Quality'
+          label='Quality Coefficient'
           name='quality'
           defaultValue={quality}
           onChange={(event) => quality = event.target.value ? +event.target.value : null}
@@ -93,7 +93,7 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
         <TextField
-          label='Coefficient Apparence'
+          label='Appearance Coefficient'
           name='look'
           defaultValue={look}
           onChange={(event) => look = event.target.value ? +event.target.value : null}
@@ -103,7 +103,7 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
         <TextField
-          label='Coefficient Praticité'
+          label='Practicality Coefficient'
           name='practicality'
           defaultValue={practicality}
           onChange={(event) => practicality = event.target.value ? +event.target.value : null}
@@ -113,7 +113,7 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
         <TextField
-          label='Coefficient Puissance'
+          label='Power Coefficient'
           name='power'
           defaultValue={power}
           onChange={(event) => power = event.target.value ? +event.target.value : null}
@@ -124,9 +124,9 @@ function HybridConfigurator({ configurationChanged }) {
         />
       </section>
       <section className='bads'>
-        <h4>Inconvénients</h4>
+        <h4>Disadvantages</h4>
         <TextField
-          label='Coefficient Prix'
+          label='Price Coefficient'
           name='price'
           defaultValue={price}
           onChange={(event) => price = event.target.value ? +event.target.value : null}
@@ -136,7 +136,7 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
         <TextField
-          label='Coefficient Volume'
+          label='Volume Coefficient'
           name='volume'
           defaultValue={volume}
           onChange={(event) => volume = event.target.value ? +event.target.value : null}
@@ -146,7 +146,7 @@ function HybridConfigurator({ configurationChanged }) {
           margin='dense'
         />
         <TextField
-          label='Coefficient Surface'
+          label='Surface Coefficient'
           name='surface'
           defaultValue={surface}
           onChange={(event) => surface = event.target.value ? +event.target.value : null}

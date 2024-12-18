@@ -11,14 +11,14 @@ import Tooltip from '@mui/material/Tooltip';
 
 function Results({ results, resultSelected }) {
   return (
-    <TableContainer component={Paper} className="results-table">
+    <TableContainer component={Paper} className="results-table" >
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Voiture</TableCell>
-            <TableCell align="right">Score positif</TableCell>
-            <TableCell align="right">Score negatif</TableCell>
-            <TableCell align="right">Score</TableCell>
+            <TableCell>Car</TableCell>
+            <TableCell align="right">Positive Score</TableCell>
+            <TableCell align="right">Negative Score</TableCell>
+            <TableCell align="right">Total Score</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
